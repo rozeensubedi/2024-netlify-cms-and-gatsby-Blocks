@@ -1,0 +1,55 @@
+.wrapper{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.headermiddlecontent{
+     display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.headermiddlecontent a{
+    padding-right: 2rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #000;
+}
+.siteHeader{
+    padding: 1rem 4rem;
+    background-color: #fff;
+    box-shadow: 0 2px 20px #0000000d;
+}
+.sectionButton{
+    background-color: #ff5d22;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 12px 25px 12px 50px;
+    position: relative;
+    text-align: center;
+    transition: .5s;
+    z-index: 1;
+}
+.headerRightContent{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+.headerRightContent input{
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    color: #221638;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 48px;
+    padding: 3px 0 3px 15px;
+    transition: .5s;
+    width: 100%;
+}
