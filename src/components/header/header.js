@@ -7,7 +7,7 @@ function Header() {
     <header className={styles.siteHeader}>
       <div className={styles.wrapper}>
         <div className="header-left-content">
-          <img  alt="logo image"></img>
+          <img  alt="logo"/>
         </div>
         <div className={styles.headermiddlecontent}>
           <nav>

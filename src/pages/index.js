@@ -5,12 +5,17 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Header from '../components/header/header';
+import OurServices from '../components/our-services/our-services';
+import Navbar from '../components/header/navbar';
 
 
 
 const IndexPage = () => (
   <Layout>
-  
+      <Header/>
+    <OurServices/>
+    <Navbar/>
   </Layout>
 )
 

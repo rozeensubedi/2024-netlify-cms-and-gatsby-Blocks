@@ -8,12 +8,12 @@ function Card() {
 
     </div>
     <h3>
-        <a>Marketing Analysis</a>
+        <a href='#'>Marketing Analysis</a>
     </h3>
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
     </p>
-    <a class="read-more-btn" href="/services/service-details/">Read More<i class="flaticon-right"></i></a>
+    <a className="read-more-btn" href="/services/service-details/">Read More<i className="flaticon-right"></i></a>
 </div>
   )
 }
