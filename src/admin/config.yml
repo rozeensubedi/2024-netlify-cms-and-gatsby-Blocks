@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-collection:
+collections:
   - name: "our-services-card"
     preview: false
     label: "Travel Packages"
