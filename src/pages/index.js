@@ -8,13 +8,15 @@ import Seo from "../components/seo"
 import Header from '../components/header/header';
 import OurServices from '../components/our-services/our-services';
 import Navbar from '../components/header/navbar';
+import { graphql } from "gatsby";
 
 
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
+ 
   <Layout>
-      <Header/>
-    <OurServices/>
+      <Header />
+    <OurServices data ={data}/>
     <Navbar/>
   </Layout>
 )
@@ -27,3 +29,21 @@ const IndexPage = () => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+
+export const query = graphql`
+query{
+  testimonialInfo:   allMarkdownRemark {
+    edges {
+      node {
+        frontmatter {
+          title
+          content
+          link
+        }
+        id
+      }
+    }
+  }
+}
+`;

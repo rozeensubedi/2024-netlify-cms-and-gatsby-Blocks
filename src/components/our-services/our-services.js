@@ -2,7 +2,9 @@ import React from 'react'
 import  './services.css';
 import Card from '../card';
 
-function OurServices() {
+function OurServices({data}) {
+  console.log(data.testimonialInfo.edges);
+
   return (
     <div className='our-service'>
         <div className='section-title'>
@@ -15,9 +17,14 @@ function OurServices() {
         </div>
         <div className='cards'>
                 
-          <Card/>
-          <Card/>
-          <Card/>
+         {data.testimonialInfo.edges.map(({node})=>{
+          return <Card
+           key={node.id}
+           title={node.frontmatter.title}
+           content ={node.frontmatter.content}
+           link = {node.frontmatter.link}
+           />
+         })}
         </div>
     </div>
   )

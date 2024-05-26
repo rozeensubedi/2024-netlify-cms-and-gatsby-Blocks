@@ -1,19 +1,20 @@
 import React from 'react'
 
 // This is a card component.
-function Card() {
+function Card(props) {
+  console.log(props);
   return (
     <div className='card'>
     <div className='icon'>
 
     </div>
     <h3>
-        <a href='#'>Marketing Analysis</a>
+        <a href={props.link}>{props.title}</a>
     </h3>
     <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+      {props.content}
     </p>
-    <a className="read-more-btn" href="/services/service-details/">Read More<i className="flaticon-right"></i></a>
+    <a className="read-more-btn" href={props.link}>Read More<i className="flaticon-right"></i></a>
 </div>
   )
 }

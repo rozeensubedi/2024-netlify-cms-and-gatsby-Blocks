@@ -27,10 +27,10 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `md`,
-        path: `${__dirname}/src/content`,
+        path: `${__dirname}/src/content/services/our-services`,
       },
     },
-   
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

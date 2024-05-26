@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./header.module.css";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 function Header() {
   return (
@@ -32,3 +32,19 @@ function Header() {
 }
 
 export default Header;
+
+// export const query = graphql`
+// query{
+//   testimonialInfo: allMarkdownRemark {
+//     edges {
+//       node {
+//         frontmatter {
+//           title
+//           content
+//         }
+//         id
+//       }
+//     }
+//   }
+// }
+// `;
