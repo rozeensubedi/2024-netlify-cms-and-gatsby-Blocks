@@ -1,0 +1,15 @@
+backend: 
+  name: git-gateway
+  branch: master
+
+collections:
+  - name: "our-services-card"
+    preview: false
+    label: "Travel Packages"
+    folder: "content/services/our-services"
+    create: true
+    slug: "{{slug}}"
+    fields: 
+      - {label: 'title', name: 'title', widget: "string"},
+      - {label: 'content', name: 'content', widget: "markdown"},
+      - {label: 'link', name: 'link', widget: "string"},
