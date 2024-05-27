@@ -1,6 +1,6 @@
 ---
-title: Our Expertise at a Glance
-description: >-
+serviceTitle: Our Expertise at a Glance
+serviceDescription: >-
   At \[Your Company Name], we are dedicated to empowering your business through
   a comprehensive suite of services designed to address your unique needs.
   Below, you'll find our core offerings, each meticulously crafted to ensure

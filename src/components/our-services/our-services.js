@@ -3,6 +3,7 @@ import "./services.css"
 import Card from "../card"
 
 function OurServices({ data }) {
+  console.log(data);
   return (
     <div className="our-service">
       <div className="section-title">
