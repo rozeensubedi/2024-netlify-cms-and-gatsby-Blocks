@@ -9,7 +9,7 @@ collections:
   - name: "our-services-card"
     preview: false
     label: "Our service"
-    folder: "content/services/our-services"
+    folder: "content/service-card"
     create: true
     slug: "{{slug}}"
     fields: 
