@@ -1,5 +1,4 @@
 import * as React from "react"
-// import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -9,6 +8,8 @@ import Header from '../components/header/header';
 import OurServices from '../components/our-services/our-services';
 import Navbar from '../components/header/navbar';
 import { graphql } from "gatsby";
+import AboutUsCard from "../components/about-us/about-us-card";
+import AboutUsWrapper from "../components/about-us/about-us-wrapper";
 
 
 
@@ -17,6 +18,7 @@ const IndexPage = ({data}) => (
   <Layout>
       <Header />
     <OurServices data ={data}/>
+    <AboutUsWrapper/>
     <Navbar/>
   </Layout>
 )

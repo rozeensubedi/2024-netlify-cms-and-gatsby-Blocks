@@ -26,8 +26,36 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `md`,
-        path: `${__dirname}/content`,
+        name: `about-us`,
+        path: `${__dirname}/content/about-us`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `about-us-card`,
+        path: `${__dirname}/content/about-us-cards`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `about-us-card`,
+        path: `${__dirname}/content/about-us-cards`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `service-card`,
+        path: `${__dirname}/content/service-card`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `service-page`,
+        path: `${__dirname}/content/service-page`,
       },
     },
     {
