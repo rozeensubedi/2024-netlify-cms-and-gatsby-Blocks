@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `md`,
-        path: `${__dirname}/content/service-card`,
+        path: `${__dirname}/content`,
       },
     },
     {
