@@ -25,3 +25,23 @@ collections:
     fields: 
       - {label: 'title', name: 'title', widget: "string"}
       - {label: 'description', name: 'description', widget: "markdown"}
+  - name: "about-us"
+    preview: false
+    label: "About Us"
+    folder: "content/about-us"
+    create: false
+    slug: "{{slug}}"
+    fields: 
+      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
+      - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
+      - {label: 'Description', name: 'description', widget: "markdown"}
+  - name: "about-us-card"
+    preview: false
+    label: "About Us Card"
+    folder: "content/about-us-cards"
+    create: true
+    slug: "{{slug}}"
+    fields: 
+      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
+      - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
+      - {label: 'Description', name: 'description', widget: "markdown"}
