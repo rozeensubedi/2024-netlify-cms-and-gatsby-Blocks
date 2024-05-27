@@ -3,7 +3,6 @@ import  './services.css';
 import Card from '../card';
 
 function OurServices({data}) {
-  console.log(data.testimonialInfo.edges);
 
   return (
     <div className='our-service'>
