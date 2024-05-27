@@ -1,5 +1,8 @@
 ---
-title: Marketing Analysis
-content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+title: Web Development
+content: Your website is the face of your business online. Our web development
+  team creates stunning, responsive websites tailored to your needs. From
+  e-commerce platforms to custom web applications, we ensure a seamless user
+  experience and robust functionality.
 link: http://www.youtube.com
 ---
