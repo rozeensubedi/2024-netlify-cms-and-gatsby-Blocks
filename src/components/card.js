@@ -2,7 +2,6 @@ import React from 'react'
 
 // This is a card component.
 function Card(props) {
-  console.log(props);
   return (
     <div className='card'>
     <div className='icon'>

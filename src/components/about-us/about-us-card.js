@@ -1,24 +1,28 @@
-import React from "react"
+import React, { Fragment } from "react"
 // import Card1 from '../../images/card-1.png';
 import './about-us.css';
 
-function AboutUsCard() {
+function AboutUsCard({data}) {
   return (
-    <div className="about-us-card">
-      <div className="about-us-card-content">
-        <span className="sub-title">DIGITAL MARKETING</span>
-        <h2>Creative solutions, creative results</h2>
-        <p>
-          We believe brand interaction is key in communication. Real innovations
-          and a positive customer experience are the heart of successful
-          communication.
-        </p>
-        <span>Custom Components</span>
+   <Fragment>
+    {data.aboutUsCardInfo.edges.map(({node}, index)=>{
+      if(node.frontmatter.aboutUsCardTitle != null){
+        <div key={index} className="about-us-card">
+        <div className="about-us-card-content">
+          <span className="sub-title">{node.frontmatter.aboutUsCardSemiTitle}</span>
+          <h2>{node.frontmatter.aboutUsCardTitle}</h2>
+          <p>
+           {node.frontmatter.aboutUsCardDescription}
+          </p>
+          <span>Custom Components</span>
+        </div>
+        <div className="about-us-card-image">
+              {/* <img src={Card1}/> */}
+        </div>
       </div>
-      <div className="about-us-card-image">
-            {/* <img src={Card1}/> */}
-      </div>
-    </div>
+      }
+    })}
+   </Fragment>
   )
 }
 

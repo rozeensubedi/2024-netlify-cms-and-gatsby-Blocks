@@ -1,16 +1,23 @@
-import React from "react"
+import React, { Fragment } from "react"
 import AboutUsCard from "./about-us-card"
 
-function AboutUsWrapper() {
+function AboutUsWrapper({ data }) {
   return (
     <div id="about-us-wrapper">
-      <span className="sub-title">ABOUT US</span>
-      <h3>Amazing Business Solution Whatever Your Needs</h3>
-      <p>
-        Real innovations and a positive customer experience are the heart of
-        successful communication. No fake products and services.
-      </p>
-      <AboutUsCard/>
+      {data.aboutUsInfo.edges.map(({ node }, index) => {
+        if (node.frontmatter.aboutUsTitle != null) {
+          return (
+            <Fragment key={index}>
+              <span className="sub-title">{node.frontmatter.aboutUsSemiTitle}</span>
+              <h3>{node.frontmatter.aboutUsTitle}</h3>
+              <p>
+                {node.frontmatter.aboutUsDescription}
+              </p>
+            </Fragment>
+          )
+        }
+      })}
+      <AboutUsCard data={data}/>
     </div>
   )
 }
