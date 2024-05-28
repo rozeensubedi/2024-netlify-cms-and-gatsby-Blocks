@@ -47,7 +47,7 @@ collections:
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
       - label: "Info Block"
         name: "modularWidget"
-        widget: "object"
+        widget: "list"
         fields:
           - {label: 'Title', name: 'title', widget: "string"}
           - {label: 'Semi Title', name: 'semiTitle', widget: "string"}
