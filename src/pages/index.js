@@ -71,7 +71,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            abourUsCardTitle
+            aboutUsCardTitle
             aboutUsCardDescription
             aboutUsCardFeaturedImage
             aboutUsCardSemiTitle
