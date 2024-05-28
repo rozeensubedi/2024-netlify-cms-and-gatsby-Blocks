@@ -1,41 +1,56 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
 // import Card1 from '../../images/card-1.png';
-import './about-us.css';
-import {getImage, GatsbyImage} from 'gatsby-plugin-image';
+import "./about-us.css"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { IoMdCheckmark } from "react-icons/io"
+import { useEffect } from "react"
 
-function AboutUsCard({data}) {
-  console.log(data.aboutUsCardInfo);
-  return (
-   <Fragment>
-    {data.aboutUsCardInfo.edges.map(({node}, index)=>{
-
-      if(node.frontmatter.aboutUsCardTitle != null){
-        return <div key={index} className="about-us-card">
-        <div className="about-us-card-content">
-          <span className="sub-title">{node.frontmatter.aboutUsCardSemiTitle}</span>
-          <h2>{node.frontmatter.aboutUsCardTitle}</h2>
-          <p>
-           {node.frontmatter.aboutUsCardDescription}
-          </p>
-          <span>Custom Components</span>
-          <div>
-          <h3>{node.frontmatter.modularWidget.title}</h3>
-          <p>{node.frontmatter.modularWidget.semiTitle}</p>
-        </div>
-        </div>
-        <div className="about-us-card-image">
-              <p>
-              <GatsbyImage
-              image={getImage(node.frontmatter.aboutUsCardFeaturedImage)}
-              alt={node.frontmatter.title}
-              />
-              </p>
-        </div>
-        
-      </div>
+function AboutUsCard({ data }) {
+  const [info, setInfo] = useState([])
+  useEffect(() => {
+    let newInfo = []
+    data.aboutUsCardInfo.edges.forEach(({ node }) => {
+      if (node.frontmatter.aboutUsCardTitle != null) {
+        newInfo.push(node)
       }
-    })}
-   </Fragment>
+    })
+    setInfo(newInfo)
+  }, [])
+  return (
+    <Fragment>
+      {info != 0 && info.map((element, index) => {
+        console.log(element.front);
+        return (
+          <div key={index} className={`about-us-card ${index > 0 && index%2!=0 ? 'about-us-card-reverse': ''}`}>
+            <div className="about-us-card-content">
+              <span className="sub-title">
+                {element.frontmatter.aboutUsCardSemiTitle}
+              </span>
+              <h2>{element.frontmatter.aboutUsCardTitle}</h2>
+              <p>{element.frontmatter.aboutUsCardDescription}</p>
+              <span>Custom Components</span>
+              {element.frontmatter.modularWidget != undefined && element.frontmatter.modularWidget.map((item, index) => {
+                return (
+                  <div key={index} className="about-us-card-list">
+                    <h3>
+                      <IoMdCheckmark style={{ color: "orange" }} /> {item.title}
+                    </h3>
+                    <p>{item.semiTitle}</p>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="about-us-card-image">
+              <GatsbyImage
+                image={getImage(element.frontmatter.aboutUsCardFeaturedImage)}
+                alt={element.frontmatter.aboutUsCardTitle}
+              />
+            </div>
+          </div>
+        )
+      })}
+      {data.aboutUsCardInfo.edges.map(({ node }, index) => {})}
+    </Fragment>
   )
 }
 
