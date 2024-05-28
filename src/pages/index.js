@@ -73,11 +73,7 @@ export const query = graphql`
             aboutUsCardDescription
             aboutUsCardSemiTitle
             aboutUsCardTitle
-            aboutUsCardFeaturedImage {
-              childImageSharp {
-                gatsbyImageData(aspectRatio: 1.5, width: 600)
-              }
-            }
+            aboutUsCardFeaturedImage 
             modularWidget {
               semiTitle
               title
