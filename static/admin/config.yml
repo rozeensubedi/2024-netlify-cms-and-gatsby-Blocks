@@ -32,9 +32,9 @@ collections:
     create: false
     slug: "{{slug}}"
     fields: 
-      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
+      - {label: 'title', name: 'aboutUsTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
-      - {label: 'Description', name: 'description', widget: "markdown"}
+      - {label: 'Description', name: 'aboutUsDescription', widget: "markdown"}
   - name: "about-us-card"
     preview: false
     label: "About Us Card"
