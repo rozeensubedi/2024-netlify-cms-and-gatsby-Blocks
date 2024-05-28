@@ -1,5 +1,5 @@
 ---
-abourUsCardTitle: Creative solutions, creative results
+aboutUsCardTitle: Creative solutions, creative results
 aboutUsCardSemiTitle: Digital Marketing
 aboutUsCardDescription: We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication.
 aboutUsCardFeaturedImage: '../../static/images/card-1'

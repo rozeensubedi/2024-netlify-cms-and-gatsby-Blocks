@@ -23,8 +23,8 @@ collections:
     create: false
     slug: "{{slug}}"
     fields: 
-      - {label: 'title', name: 'title', widget: "string"}
-      - {label: 'description', name: 'description', widget: "markdown"}
+      - {label: 'title', name: 'serviceTitle', widget: "string"}
+      - {label: 'description', name: 'serviceDescription', widget: "markdown"}
   - name: "about-us"
     preview: false
     label: "About Us"
@@ -42,6 +42,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields: 
-      - {label: 'Title', name: 'aboutUsCardTitle', widget: "string"}
+      - {label: 'title', name: 'aboutUsCardTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
