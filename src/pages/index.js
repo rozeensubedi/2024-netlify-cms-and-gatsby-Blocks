@@ -10,7 +10,6 @@ import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
 import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
-import GlobalStyles from '../styles/GlobalStyles'
 
 const IndexPage = ({ data }) => (
   <Layout>

@@ -5992,6 +5992,13 @@ gatsby-plugin-sharp@^5.13.1:
     semver "^7.5.3"
     sharp "^0.32.6"
 
+gatsby-plugin-styled-components@^6.13.1:
+  version "6.13.1"
+  resolved "https://registry.npmjs.org/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-6.13.1.tgz"
+  integrity sha512-5Y3rvqgOIXuYaMgrvMinPW1/1hht2M39gM6eZZOm08U1ybykHwIFYAj68eC2PauuwFj6Xg8T+X1zW5YHyaP21Q==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+
 gatsby-plugin-typescript@^5.13.1:
   version "5.13.1"
   resolved "https://registry.npmjs.org/gatsby-plugin-typescript/-/gatsby-plugin-typescript-5.13.1.tgz"

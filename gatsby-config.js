@@ -93,5 +93,7 @@ module.exports = {
         display: 'swap' // Optional: swap, block, fallback, optional
       },
     },
+    `gatsby-plugin-styled-components`, // Add this line
+
   ],
 }
