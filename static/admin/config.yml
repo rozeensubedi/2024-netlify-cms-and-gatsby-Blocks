@@ -45,6 +45,7 @@ collections:
       - {label: 'title', name: 'aboutUsCardTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
+      - {label: 'Featured Image', name: 'aboutUsCardFeaturedImage', widget: "image"}
       - label: "Info Block"
         name: "modularWidget"
         widget: "list"
