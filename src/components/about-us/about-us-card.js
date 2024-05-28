@@ -49,7 +49,6 @@ function AboutUsCard({ data }) {
           </div>
         )
       })}
-      {data.aboutUsCardInfo.edges.map(({ node }, index) => {})}
     </Fragment>
   )
 }
