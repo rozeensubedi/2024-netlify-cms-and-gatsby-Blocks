@@ -45,10 +45,16 @@ collections:
       - {label: 'title', name: 'aboutUsCardTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
-  - label: Content
+  - name: "content"
+    label: "Content"
+    folder: 'content/'
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 'title', name: 'title', widget: 'string' }
+      - label: Content
         name: content
         widget: list
-        folder: 'content/'
         types:
           - label: Text Block
             name: text_block
