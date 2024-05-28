@@ -10,6 +10,7 @@ import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
 import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
+import GlobalStyles from '../styles/GlobalStyles'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -66,15 +67,21 @@ export const query = graphql`
         }
       }
     }
-    aboutUsCardInfo:  allMarkdownRemark {
+    aboutUsCardInfo: allMarkdownRemark {
       edges {
         node {
-          id
           frontmatter {
-            aboutUsCardTitle
+            aboutUsCardFeaturedImage {
+              root
+              relativePath
+              absolutePath
+              childImageSharp {
+                gatsbyImageData(width: 600, aspectRatio: 1.5)
+              }
+            }
             aboutUsCardDescription
-            aboutUsCardFeaturedImage
             aboutUsCardSemiTitle
+            aboutUsCardTitle
           }
         }
       }

@@ -45,3 +45,26 @@ collections:
       - {label: 'title', name: 'aboutUsCardTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
+  - label: Content
+        name: content
+        widget: list
+        folder: 'content/'
+        types:
+          - label: Text Block
+            name: text_block
+            widget: object
+            fields:
+              - { label: 'Heading', name: 'heading', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'text' }
+          - label: Image Block
+            name: image_block
+            widget: object
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Alt Text', name: 'alt', widget: 'string' }
+          - label: Gallery Block
+            name: gallery_block
+            widget: object
+            fields:
+              - { label: 'Gallery Title', name: 'gallery_title', widget: 'string' }
+              - { label: 'Images', name: 'images', widget: 'list', allow_multiple: true, field: { label: 'Image', name: 'image', widget: 'image' } }
