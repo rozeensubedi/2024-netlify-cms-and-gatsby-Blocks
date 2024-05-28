@@ -42,6 +42,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields: 
-      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
-      - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
-      - {label: 'Description', name: 'description', widget: "markdown"}
+      - {label: 'Title', name: 'aboutUsCardTitle', widget: "string"}
+      - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
+      - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
