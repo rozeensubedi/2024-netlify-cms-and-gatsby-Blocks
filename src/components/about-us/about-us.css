@@ -69,3 +69,6 @@
     line-height: 1.8;
     margin-bottom: 15px;
 }
+.about-us-card-reverse{
+    flex-direction: row-reverse;
+}
