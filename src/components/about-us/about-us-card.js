@@ -8,8 +8,7 @@ function AboutUsCard({data}) {
   return (
    <Fragment>
     {data.aboutUsCardInfo.edges.map(({node}, index)=>{
-      console.log(getImage(node.frontmatter.aboutUsCardFeaturedImage));
-      console.log(node.frontmatter.aboutUsCardTitle);
+
       if(node.frontmatter.aboutUsCardTitle != null){
         return <div key={index} className="about-us-card">
         <div className="about-us-card-content">
@@ -19,6 +18,10 @@ function AboutUsCard({data}) {
            {node.frontmatter.aboutUsCardDescription}
           </p>
           <span>Custom Components</span>
+          <div>
+          <h3>{node.frontmatter.modularWidget.title}</h3>
+          <p>{node.frontmatter.modularWidget.semiTitle}</p>
+        </div>
         </div>
         <div className="about-us-card-image">
               <p>
@@ -28,6 +31,7 @@ function AboutUsCard({data}) {
               />
               </p>
         </div>
+        
       </div>
       }
     })}

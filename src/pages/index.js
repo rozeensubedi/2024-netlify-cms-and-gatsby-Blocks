@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Header />
     <OurServices data={data} />
-    <AboutUsWrapper data={data}/>
+    <AboutUsWrapper data={data} />
     <Navbar />
   </Layout>
 )
@@ -70,17 +70,18 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            aboutUsCardFeaturedImage {
-              root
-              relativePath
-              absolutePath
-              childImageSharp {
-                gatsbyImageData(width: 600, aspectRatio: 1.5)
-              }
-            }
             aboutUsCardDescription
             aboutUsCardSemiTitle
             aboutUsCardTitle
+            aboutUsCardFeaturedImage {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 1.5, width: 600)
+              }
+            }
+            modularWidget {
+              semiTitle
+              title
+            }
           }
         }
       }
