@@ -23,7 +23,10 @@ function Header({ data }) {
           {logo.length > 0 && (
             <Fragment>
               {logo[0].frontmatter.logoImage != null && (
-                <GatsbyImage alt="Image" image={getImage(logo[0].frontmatter.logoImage)} />
+                <GatsbyImage
+                  alt="Image"
+                  image={getImage(logo[0].frontmatter.logoImage)}
+                />
               )}
 
               {logo[0].frontmatter.logoImage == null && (
@@ -59,4 +62,3 @@ function Header({ data }) {
 }
 
 export default Header
-
