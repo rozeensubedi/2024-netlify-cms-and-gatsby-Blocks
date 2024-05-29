@@ -42,7 +42,7 @@ function Footer({ data }) {
             {footerInfo[0].frontmatter.footerField.map((field, index) => {
               return (
                 <div className="single-footer-widget single-footer-widget-2">
-                  <h3>{field.fieldtitle}</h3>
+                  <h3>{field.fieldTitle}</h3>
                   <ul className="footer-links-list">
                     {field.footerField.map((field)=>{
                       return <li>
