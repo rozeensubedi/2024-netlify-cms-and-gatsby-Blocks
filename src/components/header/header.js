@@ -21,7 +21,7 @@ function Header({ data }) {
   return (
     <header className={styles.siteHeader}>
       <div className={styles.wrapper}>
-        <div className="header-left-content">
+        <div className={styles.headerleftcontent}>
           {logo.length > 0 && (
             <Fragment>
               {logo[0].frontmatter.logoImage != null && (

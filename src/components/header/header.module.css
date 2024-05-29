@@ -1,6 +1,8 @@
 .wrapper{
-    display: flex;
+    display: grid;
     gap: 2rem;
+    align-items: center;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
 }
 
@@ -52,4 +54,7 @@
     padding: 3px 0 3px 15px;
     transition: .5s;
     width: 100%;
+}
+.headerleftcontent{
+    width: 14rem;
 }
