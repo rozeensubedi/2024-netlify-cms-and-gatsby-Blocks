@@ -108,6 +108,36 @@ collections:
     folder: "content/logo"
     create: false
     slug: "{{logoTitle}}"
+      - {label: 'Title', name: 'logoTitle', widget: "string"}
+      - {label: 'Featured Image', name: 'logoImage', widget: "image"}
+          
+  - name: 'footer'
+    preview: false
+    label: 'Footer'
+    folder: 'content/footer'
+    create: false
+    slug: "Footer"
+    fields:
+      - {label: 'Title', name: 'footerTitle', widget: 'string'}
+      - {label: 'Content', name: 'footerContent', widget: 'string'}
+      - label: "Social Widgets"
+        name: "socialIcons"
+        widget: "list"
+        fields:
+          - {label: 'Link', name: 'socialLink', widget: 'string'}
+          - {label: 'Icon ClassName', name: 'socialIconClass', widget: 'string'}
+      - label: "Footer Field"
+        name: "footerField"
+        widget: "list"
+        fields:
+          - {label: 'Title', name: 'fieldTitle', widget: 'string'}
+          - label: "Footer Field"
+            name: "footerField"
+            widget: "list"
+            fields:
+              - {label: 'Field Item Link', name: 'fieldItemLink', widget: 'string'}
+              - {label: 'Field Item Name', name: 'fieldItemName', widget: 'string'}
+              - {label: 'Field Item Icon', name: 'fieldItemIcon', widget: 'string'}
     fields:
       - { label: "Title", name: "logoTitle", widget: "string" }
       - { label: "Featured Image", name: "logoImage", widget: "image" }

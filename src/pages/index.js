@@ -8,9 +8,9 @@ import Header from "../components/header/header"
 import OurServices from "../components/our-services/our-services"
 import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
-import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
 import Pricing from "../components/pricing/pricing"
+import Footer from "../components/footer/footer"
 import Banner from "../components/banner/banner"
 import "../css/index.css"
 
@@ -20,7 +20,8 @@ const IndexPage = ({ data }) => (
     <Banner data={data}/>
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
-    <Pricing data={data} />
+    <Pricing data={data}/>
+    <Footer data={data}/>
     <Navbar />
   </Layout>
 )
@@ -126,6 +127,28 @@ export const query = graphql`
             logoImage {
               childImageSharp {
                 gatsbyImageData(width: 300)
+              }
+            }
+          }
+        }
+      }
+    }
+    footerInfo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            footerContent
+            footerTitle
+            socialIcons {
+              socialIconClass
+              socialLink
+            }
+            footerField {
+              fieldTitle
+              footerField {
+                fieldItemIcon
+                fieldItemLink
+                fieldItemName
               }
             }
           }
