@@ -32,7 +32,7 @@ function Footer({ data }) {
                   return (
                     <li>
                       <a href={icon.socialLink}>
-                        <FontAwesomeIcon icon={FaTwitter} />
+                       {icon.socialIconClass}
                       </a>
                     </li>
                   )
@@ -44,17 +44,20 @@ function Footer({ data }) {
                 <div className="single-footer-widget single-footer-widget-2">
                   <h3>{field.fieldTitle}</h3>
                   <ul className="footer-links-list">
-                    {field.footerField.map((field)=>{
-                      return <li>
-                        <FontAwesomeIcon icon={field.fieldItemIcon}/>
-                      <a href={field.fieldItemLink}>{field.fieldItemName}</a>
-                    </li>
+                    {field.footerField.map(field => {
+                      return (
+                        <li>
+                          <FontAwesomeIcon icon={field.fieldItemIcon} />
+                          <a href={field.fieldItemLink}>
+                            {field.fieldItemName}
+                          </a>
+                        </li>
+                      )
                     })}
                   </ul>
                 </div>
               )
             })}
-            
           </div>
           <div className="footer-bottom-area">
             <div className="footer-bottom-child">
