@@ -8,7 +8,7 @@ socialIcons:
 footerField:
   - fieldTitle: Explore
     footerField:
-      - fieldItemLink: "#"
+      - fieldItemLink: https://www.youtube.com
         fieldItemName: Home
         fieldItemIcon: " "
       - fieldItemLink: "#"
