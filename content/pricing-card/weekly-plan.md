@@ -1,8 +1,8 @@
 ---
 pricingCardTitle: Weekly
-pricingCardPrice: $29
+pricingCardPrice: 29
 pricingCardSuffix: /mo
-pricingCardPrefix: 
+pricingCardPrefix: $
 buttonText: Subscribe Now
 featureItems:
   - pricingFeatureContent: Feature 1
