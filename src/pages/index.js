@@ -114,5 +114,21 @@ export const query = graphql`
         }
       }
     }
+    siteLogo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            pricingCardPrice
+            pricingCardSuffix
+            pricingCardTitle
+            featureItems {
+              pricingFeatureContent
+              featureType
+            }
+            buttonText
+          }
+        }
+      }
+    }
   }
 `
