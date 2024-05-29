@@ -1,7 +1,7 @@
 ---
-pricingCardTitle: Weekly
-pricingCardPrice: "120"
-pricingCardSuffix: / Per week
+pricingCardTitle: Month Plan
+pricingCardPrice: "840"
+pricingCardSuffix: / Per month
 pricingCardPrefix: $
 buttonText: Select the Plan
 featureItems:
@@ -9,14 +9,14 @@ featureItems:
     featureType: available
   - pricingFeatureContent: Digital Marketing
     featureType: available
-  - pricingFeatureContent: Google Analytics
+  - pricingFeatureContent: Google Analaytics
     featureType: available
   - pricingFeatureContent: Branding Solutions
     featureType: available
-  - pricingFeatureContent: Digital accounts
+  - pricingFeatureContent: Digital Acoounts
     featureType: available
-  - pricingFeatureContent: Pay-per-click
-    featureType: unavailable
+  - pricingFeatureContent: Pay-per-Click
+    featureType: available
   - pricingFeatureContent: 24/7 Support
     featureType: unavailable
 ---
