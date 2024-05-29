@@ -105,6 +105,7 @@ export const query = graphql`
             pricingCardPrice
             pricingCardSuffix
             pricingCardTitle
+            pricingCardPrefix
             featureItems {
               pricingFeatureContent
               featureType

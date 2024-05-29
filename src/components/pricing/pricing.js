@@ -17,7 +17,7 @@ function Pricing({data}) {
   useEffect(() => {
     let newCardInfo = []
     data.pricingCardInfo.edges.forEach(({ node }) => {
-      if (node.frontmatter.pricingCardtitle != null) {
+      if (node.frontmatter.pricingCardTitle != null) {
         newCardInfo.push(node)
       }
     })
@@ -38,10 +38,20 @@ function Pricing({data}) {
        )}
       </div>
       <div className="pricing-container-wrapper">
-        <PricingCard/>
-        <PricingCard/>
-        <PricingCard/>
-        <PricingCard/>
+        {pricingCardInfo.length >0 && pricingCardInfo.map((info, index)=>{
+          console.log(info)
+          return <PricingCard
+           key={index}
+           buttonText={info.frontmatter.buttonText}
+           featureItems={info.frontmatter.featureItems}
+           pricingCardPrice={info.frontmatter.pricingCardPrice}
+           pricingCardSuffix={info.frontmatter.pricingCardSuffix}
+           pricingCardPrefix={info.frontmatter.pricingCardPrefix}
+           pricingCardTitle={info.frontmatter.pricingCardTitle} 
+            />
+
+        }) }
+        
         
       </div>
     </div>

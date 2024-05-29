@@ -50,7 +50,7 @@ collections:
   
   - name: "pricing-card"
     preview: false
-    label: "Pricing Content"
+    label: "Pricing Card"
     folder: "content/pricing-card"
     create: true
     slug: "{{pricingCardTitle}}"
