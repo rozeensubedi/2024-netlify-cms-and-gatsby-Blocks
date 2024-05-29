@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./footer.css"
-import { FaFontAwesome } from "react-icons/fa"
+import { FaFontAwesome, FaTwitter } from "react-icons/fa"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function Footer({ data }) {
@@ -32,7 +32,7 @@ function Footer({ data }) {
                   return (
                     <li>
                       <a href={icon.socialLink}>
-                        <FontAwesomeIcon icon={icon.socialIconClass} />
+                        <FontAwesomeIcon icon={FaTwitter} />
                       </a>
                     </li>
                   )
