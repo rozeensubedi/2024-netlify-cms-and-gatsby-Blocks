@@ -8,14 +8,15 @@ public_folder: ../../static/images/
 collections:
   - name: "our-services-card"
     preview: false
-    label: "Our service"
+    label: "Our Service"
     folder: "content/service-card"
     create: true
     slug: "{{slug}}"
     fields: 
-      - {label: 'title', name: 'title', widget: "string"}
-      - {label: 'content', name: 'content', widget: "markdown"}
-      - {label: 'link', name: 'link', widget: "string"}
+      - {label: 'Title', name: 'title', widget: "string"}
+      - {label: 'Content', name: 'content', widget: "markdown"}
+      - {label: 'Link', name: 'link', widget: "string"}
+  
   - name: "services"
     preview: false
     label: "Service"
@@ -23,8 +24,9 @@ collections:
     create: false
     slug: "{{slug}}"
     fields: 
-      - {label: 'title', name: 'serviceTitle', widget: "string"}
-      - {label: 'description', name: 'serviceDescription', widget: "markdown"}
+      - {label: 'Title', name: 'serviceTitle', widget: "string"}
+      - {label: 'Description', name: 'serviceDescription', widget: "markdown"}
+  
   - name: "about-us"
     preview: false
     label: "About Us"
@@ -32,9 +34,44 @@ collections:
     create: false
     slug: "{{slug}}"
     fields: 
-      - {label: 'title', name: 'aboutUsTitle', widget: "string"}
+      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsDescription', widget: "markdown"}
+  
+  - name: "pricing-content"
+    preview: false
+    label: "Pricing Content"
+    folder: "content/pricing-content"
+    create: false
+    slug: "{{pricingTitle}}"
+    fields: 
+      - {label: 'Title', name: 'pricingTitle', widget: "string"}
+      - {label: 'Description', name: 'pricingDescription', widget: "markdown"}
+  
+  - name: "pricing-card"
+    preview: false
+    label: "Pricing Content"
+    folder: "content/pricing-card"
+    create: true
+    slug: "{{pricingCardTitle}}"
+    fields: 
+      - {label: 'Title', name: 'pricingCardTitle', widget: "string"}
+      - {label: 'Price', name: 'pricingCardPrice', widget: "string"}
+      - {label: 'Suffix', name: 'pricingCardSuffix', widget: "string"}
+      - {label: 'Prefix', name: 'pricingCardPrefix', widget: "string"}
+      - {label: 'Button Text', name: 'buttonText', widget: "string"}
+      - label: "Feature Items"
+        name: "featureItems"
+        widget: "list"
+        fields:
+          - {label: 'Pricing Feature Content', name: 'pricingFeatureContent', widget: "string"}
+          - label: "Feature Type"
+            name: "featureType"
+            widget: "select"
+            options: 
+              - {label: "Available", value: 'available'}
+              - {label: "Unavailable", value: 'unavailable'}
+  
   - name: "about-us-card"
     preview: false
     label: "About Us Card"
@@ -42,7 +79,7 @@ collections:
     create: true
     slug: "{{aboutUsCardTitle}}"
     fields: 
-      - {label: 'title', name: 'aboutUsCardTitle', widget: "string"}
+      - {label: 'Title', name: 'aboutUsCardTitle', widget: "string"}
       - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
       - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
       - {label: 'Featured Image', name: 'aboutUsCardFeaturedImage', widget: "image"}
@@ -52,4 +89,3 @@ collections:
         fields:
           - {label: 'Title', name: 'title', widget: "string"}
           - {label: 'Semi Title', name: 'semiTitle', widget: "string"}
-

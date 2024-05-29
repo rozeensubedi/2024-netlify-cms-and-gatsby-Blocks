@@ -10,12 +10,14 @@ import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
 import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
+import Pricing from "../components/pricing/pricing"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Header />
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
+    <Pricing data={data}/>
     <Navbar />
   </Layout>
 )
@@ -75,13 +77,39 @@ export const query = graphql`
             aboutUsCardTitle
             aboutUsCardFeaturedImage {
               childImageSharp {
-                gatsbyImageData(aspectRatio: 1.5, width: 600)
+                gatsbyImageData(aspectRatio: 1.5)
               }
             }
             modularWidget {
               semiTitle
               title
             }
+          }
+        }
+      }
+    }
+    pricingInfo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            pricingDescription
+            pricingTitle
+          }
+        }
+      }
+    }
+    pricingCardInfo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            pricingCardPrice
+            pricingCardSuffix
+            pricingCardTitle
+            featureItems {
+              pricingFeatureContent
+              featureType
+            }
+            buttonText
           }
         }
       }
