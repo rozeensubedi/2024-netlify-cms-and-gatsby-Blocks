@@ -54,24 +54,7 @@ function Footer({ data }) {
                 </div>
               )
             })}
-            <div className="single-footer-widget single-footer-widget-2">
-              <h3>Resources</h3>
-              <ul className="footer-links-list">
-                <li>
-                  <a href="#">Our Scientists</a>
-                </li>
-              </ul>
-            </div>
-            <div className="single-footer-widget single-footer-widget-4">
-              <h3>Address</h3>
-              <ul className="footer-contact-info">
-                <li>
-                  Icon 175 5th Ave, New York, NY 10010,
-                  <br />
-                  United States
-                </li>
-              </ul>
-            </div>
+            
           </div>
           <div className="footer-bottom-area">
             <div className="footer-bottom-child">
