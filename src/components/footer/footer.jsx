@@ -1,75 +1,98 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./footer.css"
+import { FaFontAwesome } from "react-icons/fa"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-function Footer() {
+function Footer({ data }) {
+  const [footerInfo, setFooterInfo] = useState([])
+
+  useEffect(() => {
+    let newInfo = []
+    data.footerInfo.edges.forEach(({ node }) => {
+      if (node.frontmatter.footerTitle != null) {
+        newInfo.push(node)
+      }
+    })
+    setFooterInfo(newInfo)
+  }, [])
+  console.log(footerInfo)
   return (
     <footer>
-      <div className="footer-wrapper">
-        <div className="footer-content-wrapper">
-          <div className="single-footer-widget single-footer-widget-4">
-            <a href="#">
-              <img />
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-              suspendisse.
-            </p>
-            <ul className="social-link">
-              <li>
-                <a href="#">Facebook Icon</a>
-              </li>
-              <li>
-                <a href="#">Twitter Icon</a>
-              </li>
-            </ul>
+      {footerInfo.length > 0 && (
+        <div className="footer-wrapper">
+          <div className="footer-content-wrapper">
+            <div className="single-footer-widget single-footer-widget-4">
+              <a href="#">
+                <img />
+                {footerInfo[0].frontmatter.footerTitle}
+              </a>
+              <p>{footerInfo[0].frontmatter.footerContent}</p>
+              <ul className="social-link">
+                {footerInfo[0].frontmatter.socialIcons.map((icon, index) => {
+                  return (
+                    <li>
+                      <a href={icon.socialLink}>
+                        <FontAwesomeIcon icon={icon.socialIconClass} />
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            {footerInfo[0].frontmatter.footerField.map((field, index) => {
+              return (
+                <div className="single-footer-widget single-footer-widget-2">
+                  <h3>{field.fieldtitle}</h3>
+                  <ul className="footer-links-list">
+                    {field.footerField.map((field)=>{
+                      return <li>
+                        <FontAwesomeIcon icon={field.fieldItemIcon}/>
+                      <a href={field.fieldItemLink}>{field.fieldItemName}</a>
+                    </li>
+                    })}
+                  </ul>
+                </div>
+              )
+            })}
+            <div className="single-footer-widget single-footer-widget-2">
+              <h3>Resources</h3>
+              <ul className="footer-links-list">
+                <li>
+                  <a href="#">Our Scientists</a>
+                </li>
+              </ul>
+            </div>
+            <div className="single-footer-widget single-footer-widget-4">
+              <h3>Address</h3>
+              <ul className="footer-contact-info">
+                <li>
+                  Icon 175 5th Ave, New York, NY 10010,
+                  <br />
+                  United States
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="single-footer-widget single-footer-widget-2">
-            <h3>Explore</h3>
-            <ul className="footer-links-list">
-              <li>
-                <a href="#">Home</a>
-              </li>
-            </ul>
-          </div>
-          <div className="single-footer-widget single-footer-widget-2">
-            <h3>Resources</h3>
-            <ul className="footer-links-list">
-              <li>
-                <a href="#">Our Scientists</a>
-              </li>
-            </ul>
-          </div>
-          <div className="single-footer-widget single-footer-widget-4">
-            <h3>Address</h3>
-            <ul className="footer-contact-info">
-              <li>
-                Icon 175 5th Ave, New York, NY 10010,
-                <br />
-                United States
-              </li>
-            </ul>
+          <div className="footer-bottom-area">
+            <div className="footer-bottom-child">
+              <p>
+                Copyright @ 2024 <strong>Rewy</strong> All rights reserved
+                <a href="#">Envy Theme</a>
+              </p>
+            </div>
+            <div className="footer-bottom-child">
+              <ul>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms & Conditions</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="footer-bottom-area">
-          <div className="footer-bottom-child">
-            <p>
-              Copyright @ 2024 <strong>Rewy</strong> All rights reserved
-              <a href="#">Envy Theme</a>
-            </p>
-          </div>
-          <div className="footer-bottom-child">
-            <ul>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      )}
     </footer>
   )
 }

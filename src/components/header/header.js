@@ -8,7 +8,7 @@ function Header({ data }) {
 
   useEffect(() => {
     let newInfo = []
-    console.log(data)
+   
     data.siteLogo.edges.forEach(({ node }) => {
       if (node.frontmatter.logoTitle != null) {
         newInfo.push(node)
@@ -16,7 +16,6 @@ function Header({ data }) {
     })
     setLogo(newInfo)
   }, [])
-  console.log(logo)
 
   return (
     <header className={styles.siteHeader}>
@@ -25,7 +24,7 @@ function Header({ data }) {
           {logo.length > 0 && (
             <Fragment>
               {logo[0].frontmatter.logoImage != null && (
-                <GatsbyImage image={getImage(logo[0].frontmatter.logoImage)} />
+                <GatsbyImage alt="Image" image={getImage(logo[0].frontmatter.logoImage)} />
               )}
 
               {logo[0].frontmatter.logoImage == null && (

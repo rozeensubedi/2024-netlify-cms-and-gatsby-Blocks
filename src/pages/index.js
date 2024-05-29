@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
     <Pricing data={data}/>
-    <Footer/>
+    <Footer data={data}/>
     <Navbar />
   </Layout>
 )
