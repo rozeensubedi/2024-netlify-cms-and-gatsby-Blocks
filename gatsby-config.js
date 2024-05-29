@@ -75,6 +75,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `logo`,
+        path: `${__dirname}/content/logo`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/static`,
       },
@@ -102,12 +109,11 @@ module.exports = {
       options: {
         fonts: [
           `Nunito\:400,400i,700,700i`, // Specify font family and variants
-          `Open Sans\:400,400i,700,700i`
+          `Open Sans\:400,400i,700,700i`,
         ],
-        display: 'swap' // Optional: swap, block, fallback, optional
+        display: "swap", // Optional: swap, block, fallback, optional
       },
     },
     `gatsby-plugin-styled-components`, // Add this line
-
   ],
 }

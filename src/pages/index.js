@@ -14,10 +14,10 @@ import Pricing from "../components/pricing/pricing"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Header />
+    <Header data={data} />
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
-    <Pricing data={data}/>
+    <Pricing data={data} />
     <Navbar />
   </Layout>
 )
@@ -119,14 +119,11 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            pricingCardPrice
-            pricingCardSuffix
-            pricingCardTitle
-            featureItems {
-              pricingFeatureContent
-              featureType
+            logoImage {
+              childImageSharp {
+                gatsbyImageData(width: 500)
+              }
             }
-            buttonText
           }
         }
       }

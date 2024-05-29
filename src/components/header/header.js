@@ -1,13 +1,13 @@
-import React from "react";
-import * as styles from "./header.module.css";
-import { Link, graphql } from "gatsby";
+import React from "react"
+import * as styles from "./header.module.css"
+import { Link, graphql } from "gatsby"
 
-function Header() {
+function Header(data) {
   return (
     <header className={styles.siteHeader}>
       <div className={styles.wrapper}>
         <div className="header-left-content">
-          <img  alt="logo"/>
+          <img alt="logo" />
         </div>
         <div className={styles.headermiddlecontent}>
           <nav>
@@ -22,16 +22,20 @@ function Header() {
         </div>
         <div className={styles.headerRightContent}>
           <form>
-          <input type="text" className="search-input" placeholder="Search for anything"></input>
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search for anything"
+            ></input>
           </form>
           <button className={styles.sectionButton}>Get Started</button>
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
 
 // export const query = graphql`
 // query{
