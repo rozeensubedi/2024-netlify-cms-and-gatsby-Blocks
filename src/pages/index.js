@@ -8,9 +8,9 @@ import Header from "../components/header/header"
 import OurServices from "../components/our-services/our-services"
 import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
-import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
 import Pricing from "../components/pricing/pricing"
+import Footer from "../components/footer/footer"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -18,6 +18,7 @@ const IndexPage = ({ data }) => (
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
     <Pricing data={data}/>
+    <Footer/>
     <Navbar />
   </Layout>
 )
@@ -111,6 +112,28 @@ export const query = graphql`
               featureType
             }
             buttonText
+          }
+        }
+      }
+    }
+    footerInfo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            footerContent
+            footerTitle
+            socialIcons {
+              socialIconClass
+              socialLink
+            }
+            footerField {
+              fieldTitle
+              footerField {
+                fieldItemIcon
+                fieldItemLink
+                fieldItemName
+              }
+            }
           }
         }
       }

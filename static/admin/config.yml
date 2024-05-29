@@ -89,3 +89,31 @@ collections:
         fields:
           - {label: 'Title', name: 'title', widget: "string"}
           - {label: 'Semi Title', name: 'semiTitle', widget: "string"}
+          
+  - name: 'footer'
+    preview: false
+    label: 'Footer'
+    folder: 'content/footer'
+    create: false
+    slug: 
+    fields:
+      - {label: 'Title', name: 'footerTitle', widget: 'string'}
+      - {label: 'Content', name: 'footerContent', widget: 'string'}
+      - label: "Social Widgets"
+        name: "socialIcons"
+        widget: "list"
+        fields:
+          - {label: 'Link', name: 'socialLink', widget: 'string'}
+          - {label: 'Icon ClassName', name: 'socialIconClass', widget: 'string'}
+      - label: "Footer Field"
+        name: "footerField"
+        widget: "list"
+        fields:
+          - {label: 'Title', name: 'fieldTitle', widget: 'string'}
+          - label: "Footer Field"
+            name: "footerField"
+            widget: "list"
+            fields:
+              - {label: 'Field Item Link', name: 'fieldItemLink', widget: 'string'}
+              - {label: 'Field Item Name', name: 'fieldItemName', widget: 'string'}
+              - {label: 'Field Item Icon', name: 'fieldItemIcon', widget: 'string'}

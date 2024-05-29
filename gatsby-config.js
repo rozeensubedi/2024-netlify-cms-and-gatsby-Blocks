@@ -54,6 +54,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `footer`,
+        path: `${__dirname}/content/footer`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `pricing-card`,
         path: `${__dirname}/content/pricing-card`,
       },
