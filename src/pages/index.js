@@ -116,6 +116,20 @@ export const query = graphql`
         }
       }
     }
+    siteLogo: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            logoTitle
+            logoImage {
+              childImageSharp {
+                gatsbyImageData(width: 300)
+              }
+            }
+          }
+        }
+      }
+    }
     footerInfo: allMarkdownRemark {
       edges {
         node {
