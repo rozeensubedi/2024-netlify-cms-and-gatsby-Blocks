@@ -89,6 +89,16 @@ collections:
         fields:
           - {label: 'Title', name: 'title', widget: "string"}
           - {label: 'Semi Title', name: 'semiTitle', widget: "string"}
+
+  - name: "site-logo"
+    preview: false
+    label: "Logo"
+    folder: "content/logo"
+    create: false
+    slug: "{{logoTitle}}"
+    fields: 
+      - {label: 'Title', name: 'logoTitle', widget: "string"}
+      - {label: 'Featured Image', name: 'logoImage', widget: "image"}
           
   - name: 'footer'
     preview: false

@@ -1,13 +1,38 @@
-import React from "react";
-import * as styles from "./header.module.css";
-import { Link, graphql } from "gatsby";
+import React, { useEffect, useState, Fragment } from "react"
+import * as styles from "./header.module.css"
+import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-function Header() {
+function Header({ data }) {
+  const [logo, setLogo] = useState([])
+
+  useEffect(() => {
+    let newInfo = []
+    console.log(data)
+    data.siteLogo.edges.forEach(({ node }) => {
+      if (node.frontmatter.logoTitle != null) {
+        newInfo.push(node)
+      }
+    })
+    setLogo(newInfo)
+  }, [])
+  console.log(logo)
+
   return (
     <header className={styles.siteHeader}>
       <div className={styles.wrapper}>
-        <div className="header-left-content">
-          <img  alt="logo"/>
+        <div className={styles.headerleftcontent}>
+          {logo.length > 0 && (
+            <Fragment>
+              {logo[0].frontmatter.logoImage != null && (
+                <GatsbyImage image={getImage(logo[0].frontmatter.logoImage)} />
+              )}
+
+              {logo[0].frontmatter.logoImage == null && (
+                <h2>{logo[0].frontmatter.logoTitle}</h2>
+              )}
+            </Fragment>
+          )}
         </div>
         <div className={styles.headermiddlecontent}>
           <nav>
@@ -22,16 +47,20 @@ function Header() {
         </div>
         <div className={styles.headerRightContent}>
           <form>
-          <input type="text" className="search-input" placeholder="Search for anything"></input>
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search for anything"
+            ></input>
           </form>
           <button className={styles.sectionButton}>Get Started</button>
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
 
 // export const query = graphql`
 // query{

@@ -14,7 +14,7 @@ import Footer from "../components/footer/footer"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Header />
+    <Header data={data} />
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
     <Pricing data={data}/>
