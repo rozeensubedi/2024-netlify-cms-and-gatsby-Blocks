@@ -2,12 +2,11 @@ import React, { useEffect, useState, Fragment } from "react"
 import * as styles from "./banner.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+function Banner({ data }) {
+  const [banner, bannerContent] = useState([])
 
-function Banner({data}) {
-    const [banner, bannerContent] =useState([])
-
-    useEffect (() =>{
-        let newInfo = []
+  useEffect(() => {
+    let newInfo = []
     data.bannerInformation.edges.forEach(({ node }) => {
       if (node.frontmatter.bannerTitle != null) {
         newInfo.push(node)
@@ -31,8 +30,12 @@ function Banner({data}) {
         </div>
 
         <div className={styles.bannerRightcontnet}>
-          <GatsbyImage 
-          image={getImage(banner[0].frontmatter.bannerImage)} />
+          {banner.length > 0 && (
+            <GatsbyImage
+              alt="hello"
+              image={getImage(banner[0].frontmatter.bannerImage)}
+            />
+          )}
         </div>
       </div>
     </div>

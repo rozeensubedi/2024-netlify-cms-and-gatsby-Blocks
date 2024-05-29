@@ -10,8 +10,8 @@ import Navbar from "../components/header/navbar"
 import { graphql } from "gatsby"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
 import Pricing from "../components/pricing/pricing"
-import Footer from "../components/footer/footer"
 import Banner from "../components/banner/banner"
+import Footer from "../components/footer/footer"
 import "../css/index.css"
 
 const IndexPage = ({ data }) => (

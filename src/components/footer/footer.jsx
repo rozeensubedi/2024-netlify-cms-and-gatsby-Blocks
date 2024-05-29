@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "./footer.css"
-import { FaFontAwesome, FaTwitter } from "react-icons/fa"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { FaFontAwesome, FaTwitter } from "react-icons/fa"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function Footer({ data }) {
   const [footerInfo, setFooterInfo] = useState([])
@@ -30,9 +30,13 @@ function Footer({ data }) {
               <ul className="social-link">
                 {footerInfo[0].frontmatter.socialIcons.map((icon, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <a href={icon.socialLink}>
-                       {icon.socialIconClass}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: icon.socialIconClass,
+                          }}
+                        />
                       </a>
                     </li>
                   )
@@ -41,13 +45,16 @@ function Footer({ data }) {
             </div>
             {footerInfo[0].frontmatter.footerField.map((field, index) => {
               return (
-                <div className="single-footer-widget single-footer-widget-2">
+                <div
+                  key={index}
+                  className="single-footer-widget single-footer-widget-2"
+                >
                   <h3>{field.fieldTitle}</h3>
                   <ul className="footer-links-list">
-                    {field.footerField.map(field => {
+                    {field.footerField.map((field, index) => {
                       return (
-                        <li>
-                          <FontAwesomeIcon icon={field.fieldItemIcon} />
+                        <li key={index}>
+                          {/* <FontAwesomeIcon icon={field.fieldItemIcon} /> */}
                           <a href={field.fieldItemLink}>
                             {field.fieldItemName}
                           </a>
