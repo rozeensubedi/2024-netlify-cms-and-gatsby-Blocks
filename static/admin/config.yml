@@ -1,4 +1,4 @@
-backend: 
+backend:
   name: git-gateway
   branch: master
 
@@ -12,83 +12,95 @@ collections:
     folder: "content/service-card"
     create: true
     slug: "{{slug}}"
-    fields: 
-      - {label: 'Title', name: 'title', widget: "string"}
-      - {label: 'Content', name: 'content', widget: "markdown"}
-      - {label: 'Link', name: 'link', widget: "string"}
-  
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "string" }
+
   - name: "services"
     preview: false
     label: "Service"
     folder: "content/service-page"
     create: false
     slug: "{{slug}}"
-    fields: 
-      - {label: 'Title', name: 'serviceTitle', widget: "string"}
-      - {label: 'Description', name: 'serviceDescription', widget: "markdown"}
-  
+    fields:
+      - { label: "Title", name: "serviceTitle", widget: "string" }
+      - { label: "Description", name: "serviceDescription", widget: "markdown" }
+
   - name: "about-us"
     preview: false
     label: "About Us"
     folder: "content/about-us"
     create: false
     slug: "{{slug}}"
-    fields: 
-      - {label: 'Title', name: 'aboutUsTitle', widget: "string"}
-      - {label: 'Semi Title', name: 'aboutUsSemiTitle', widget: "string"}
-      - {label: 'Description', name: 'aboutUsDescription', widget: "markdown"}
-  
+    fields:
+      - { label: "Title", name: "aboutUsTitle", widget: "string" }
+      - { label: "Semi Title", name: "aboutUsSemiTitle", widget: "string" }
+      - { label: "Description", name: "aboutUsDescription", widget: "markdown" }
+
   - name: "pricing-content"
     preview: false
     label: "Pricing Content"
     folder: "content/pricing-content"
     create: false
     slug: "{{pricingTitle}}"
-    fields: 
-      - {label: 'Title', name: 'pricingTitle', widget: "string"}
-      - {label: 'Description', name: 'pricingDescription', widget: "markdown"}
-  
+    fields:
+      - { label: "Title", name: "pricingTitle", widget: "string" }
+      - { label: "Description", name: "pricingDescription", widget: "markdown" }
+
   - name: "pricing-card"
     preview: false
     label: "Pricing Card"
     folder: "content/pricing-card"
     create: true
     slug: "{{pricingCardTitle}}"
-    fields: 
-      - {label: 'Title', name: 'pricingCardTitle', widget: "string"}
-      - {label: 'Price', name: 'pricingCardPrice', widget: "string"}
-      - {label: 'Suffix', name: 'pricingCardSuffix', widget: "string"}
-      - {label: 'Prefix', name: 'pricingCardPrefix', widget: "string"}
-      - {label: 'Button Text', name: 'buttonText', widget: "string"}
+    fields:
+      - { label: "Title", name: "pricingCardTitle", widget: "string" }
+      - { label: "Price", name: "pricingCardPrice", widget: "string" }
+      - { label: "Suffix", name: "pricingCardSuffix", widget: "string" }
+      - { label: "Prefix", name: "pricingCardPrefix", widget: "string" }
+      - { label: "Button Text", name: "buttonText", widget: "string" }
       - label: "Feature Items"
         name: "featureItems"
         widget: "list"
         fields:
-          - {label: 'Pricing Feature Content', name: 'pricingFeatureContent', widget: "string"}
+          - {
+              label: "Pricing Feature Content",
+              name: "pricingFeatureContent",
+              widget: "string",
+            }
           - label: "Feature Type"
             name: "featureType"
             widget: "select"
-            options: 
-              - {label: "Available", value: 'available'}
-              - {label: "Unavailable", value: 'unavailable'}
-  
+            options:
+              - { label: "Available", value: "available" }
+              - { label: "Unavailable", value: "unavailable" }
+
   - name: "about-us-card"
     preview: false
     label: "About Us Card"
     folder: "content/about-us-cards"
     create: true
     slug: "{{aboutUsCardTitle}}"
-    fields: 
-      - {label: 'Title', name: 'aboutUsCardTitle', widget: "string"}
-      - {label: 'Semi Title', name: 'aboutUsCardSemiTitle', widget: "string"}
-      - {label: 'Description', name: 'aboutUsCardDescription', widget: "markdown"}
-      - {label: 'Featured Image', name: 'aboutUsCardFeaturedImage', widget: "image"}
+    fields:
+      - { label: "Title", name: "aboutUsCardTitle", widget: "string" }
+      - { label: "Semi Title", name: "aboutUsCardSemiTitle", widget: "string" }
+      - {
+          label: "Description",
+          name: "aboutUsCardDescription",
+          widget: "markdown",
+        }
+      - {
+          label: "Featured Image",
+          name: "aboutUsCardFeaturedImage",
+          widget: "image",
+        }
       - label: "Info Block"
         name: "modularWidget"
         widget: "list"
         fields:
-          - {label: 'Title', name: 'title', widget: "string"}
-          - {label: 'Semi Title', name: 'semiTitle', widget: "string"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Semi Title", name: "semiTitle", widget: "string" }
 
   - name: "site-logo"
     preview: false
@@ -96,6 +108,18 @@ collections:
     folder: "content/logo"
     create: false
     slug: "{{logoTitle}}"
-    fields: 
-      - {label: 'Title', name: 'logoTitle', widget: "string"}
-      - {label: 'Featured Image', name: 'logoImage', widget: "image"}
+    fields:
+      - { label: "Title", name: "logoTitle", widget: "string" }
+      - { label: "Featured Image", name: "logoImage", widget: "image" }
+
+  - name: "banner"
+    preview: false
+    label: "Banner"
+    folder: "content/banner-content"
+    create: false
+    slug: "{{bannerTitle}}"
+    fields:
+      - { label: "Sub Title", name: "bannerSubtitle", widget: "string" }
+      - { label: "Title", name: "bannerTitle", widget: "string" }
+      - { label: "Description", name: "bannerDescription", widget: "string" }
+      - { label: "Featured Image", name: "bannerImage", widget: "image" }

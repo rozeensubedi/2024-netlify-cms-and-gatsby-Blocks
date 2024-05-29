@@ -1,0 +1,52 @@
+.sectionButton{
+    background-color: #ff5d22;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 12px 25px 12px 50px;
+    position: relative;
+    text-align: center;
+    transition: .5s;
+    z-index: 1;
+}
+.siteBannersection{
+    background: linear-gradient(75deg, #65258a 10%, #e80566) !important;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+    position: relative;
+    z-index: 1;
+}
+.wrapper{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.siteBannersection .wrapper{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.bannerLeftcontnet{
+    color: #fff;
+}
+.bannerLeftcontnet span{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.bannerLeftcontnet h2{
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+.bannerRightcontnet img{
+    height: 35rem;
+    object-fit: cover;
+}

@@ -8,7 +8,6 @@ function Header({ data }) {
 
   useEffect(() => {
     let newInfo = []
-    console.log(data)
     data.siteLogo.edges.forEach(({ node }) => {
       if (node.frontmatter.logoTitle != null) {
         newInfo.push(node)
@@ -16,7 +15,6 @@ function Header({ data }) {
     })
     setLogo(newInfo)
   }, [])
-  console.log(logo)
 
   return (
     <header className={styles.siteHeader}>
@@ -62,18 +60,3 @@ function Header({ data }) {
 
 export default Header
 
-// export const query = graphql`
-// query{
-//   testimonialInfo: allMarkdownRemark {
-//     edges {
-//       node {
-//         frontmatter {
-//           title
-//           content
-//         }
-//         id
-//       }
-//     }
-//   }
-// }
-// `;

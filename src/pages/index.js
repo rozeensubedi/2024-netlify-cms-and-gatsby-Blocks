@@ -11,10 +11,13 @@ import { graphql } from "gatsby"
 import AboutUsCard from "../components/about-us/about-us-card"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
 import Pricing from "../components/pricing/pricing"
+import Banner from "../components/banner/banner"
+import "../css/index.css"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Header data={data} />
+    <Banner data={data}/>
     <OurServices data={data} />
     <AboutUsWrapper data={data} />
     <Pricing data={data} />
@@ -123,6 +126,22 @@ export const query = graphql`
             logoImage {
               childImageSharp {
                 gatsbyImageData(width: 300)
+              }
+            }
+          }
+        }
+      }
+    }
+    bannerInformation: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            bannerSubtitle
+            bannerTitle
+            bannerDescription
+            bannerImage {
+              childImageSharp {
+                gatsbyImageData(width: 600)
               }
             }
           }
