@@ -22,9 +22,9 @@ function PricingCard({
       </div>
       <ul className="pricing-features">
         {featureItems.length > 0 &&
-          featureItems.map(item => {
+          featureItems.map((item, index) => {
             return (
-              <li>
+              <li key={index}>
                 {item.featureType == "unavailable" && (
                   <IoCloseCircleSharp
                     style={{

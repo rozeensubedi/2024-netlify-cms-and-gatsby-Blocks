@@ -119,9 +119,10 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
+            logoTitle
             logoImage {
               childImageSharp {
-                gatsbyImageData(width: 500)
+                gatsbyImageData(width: 600)
               }
             }
           }
