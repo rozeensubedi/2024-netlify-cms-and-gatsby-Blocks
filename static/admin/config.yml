@@ -131,7 +131,7 @@ collections:
   - name: "banner"
     preview: false
     label: "Banner"
-    folder: "content/banner-content"
+    folder: "content/banner"
     create: false
     slug: "{{bannerTitle}}"
     fields:
