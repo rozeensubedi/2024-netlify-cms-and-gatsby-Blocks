@@ -14,6 +14,9 @@ function Header({ data }) {
       }
     })
     setLogo(newInfo)
+    console.log("iNITIL STATE");
+    console.log("iNITIL STATE2");
+    
   }, [])
 
   return (
@@ -39,6 +42,7 @@ function Header({ data }) {
           <nav>
             <ul>
               <Link to="/"></Link>
+            
               <Link to="/about">About us</Link>
               <Link to="/service">Service</Link>
               <Link to="/blog">Blog</Link>
