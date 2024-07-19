@@ -1,7 +1,7 @@
 ---
 pricingCardTitle: Month Plan
 pricingCardPrice: "840"
-pricingCardSuffix: / Per month
+pricingCardSuffix: Per month
 pricingCardPrefix: $
 buttonText: Select the Plan
 featureItems:

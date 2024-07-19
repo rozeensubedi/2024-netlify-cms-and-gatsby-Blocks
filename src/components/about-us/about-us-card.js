@@ -33,7 +33,7 @@ function AboutUsCard({ data }) {
                 </span>
                 <h2>{element.frontmatter.aboutUsCardTitle}</h2>
                 <p>{element.frontmatter.aboutUsCardDescription}</p>
-                <span>Custom Components</span>
+                {/* <span>Custom Components</span> */}
                 {element.frontmatter.modularWidget != undefined &&
                   element.frontmatter.modularWidget.map((item, index) => {
                     return (

@@ -1,5 +1,5 @@
 #about-us-wrapper{
-    padding: 1rem 4rem;
+    padding: 3rem 4rem;
     text-align: center;
 }
 #about-us-wrapper .sub-title{
@@ -37,8 +37,9 @@
 .about-us-card > div{
     flex: 0 0 50%;
     max-width: 50%;
-    padding-left: 15px;
+    padding-left: 30px;
     padding-right: 15px;
+    /* background-color: #ff5d22; */
 }
 .about-us-card .about-us-card-content{
     padding-right: 30px;
@@ -49,18 +50,23 @@
     max-width: 100%;
 }
 .about-us-card-content .sub-title{
-    color: #ff5d22;
+    color: #ff2222;
     display: block;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: uppercase;
+    /* background-color: red; */
+    left: 110px;
 }
 .about-us-card-content h2{
     font-size: 35px;
     margin-bottom: 12px;
     font-weight: 800;
     line-height: 1.2;
+    /* background-color: aqua; */
+    margin-left: 110px;
+    text-align: start;
 }
 .about-us-card-content p{
     color: #6b6b84;
@@ -68,7 +74,9 @@
     font-weight: 600;
     line-height: 1.8;
     margin-bottom: 15px;
+    text-align: justify;
 }
 .about-us-card-reverse{
     flex-direction: row-reverse;
 }
+

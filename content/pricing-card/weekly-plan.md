@@ -1,7 +1,7 @@
 ---
 pricingCardTitle: Weekly
 pricingCardPrice: "120"
-pricingCardSuffix: / Per week
+pricingCardSuffix: Per week
 pricingCardPrefix: $
 buttonText: Select the Plan
 featureItems:

@@ -11,6 +11,7 @@
     margin-right: auto;
     max-width: 700px;
     text-align: center;
+    
 }
 .pricing-area-title h2{
     display: inline-block;
@@ -28,21 +29,31 @@
     font-size: 17px;
     font-weight: 600;
     line-height: 1.8;
+    
 }
+
+
+/* css for price-card */
 .pricing-container-wrapper{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     margin-left: 0.7rem;
     margin-right: 0.7rem;
     margin-top: -1rem;
     justify-content: center;
+    gap: 80px;
+    
+    
 }
 .pricing-container:hover{
-    box-shadow: 0 10px 30px rgba(0,0,0,.07);
+    /* box-shadow: 10px 20px 30px rgba(0,0,0,.07); */
+    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.07);
+   
 }
 .pricing-container-wrapper .pricing-container{
     flex: 0 0 auto;
-    max-width: 1148px;
+    width: 100%;
+    max-width: 300px;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
     background-color: #fff;
@@ -52,45 +63,72 @@
     text-align: center;
     transition: 0.5s;
     margin-left: 1.5rem;
+    box-shadow: 1px 2px 20px 11px rgba(126,151,161,1);
+    
+    
 }
 .pricing-header{
     padding: 20px 40px;
     text-align: center;
+    
 }
 .pricing-header h3{
     font-size: 24px;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
     font-weight: 800;
     line-height: 1.2;
     margin-top: 0;
+    
+    
+    
 }
-.pricing-container .price{
-    border-bottom: 2px dashed #f4f5fe;
-    border-top: 2px dashed #f4f5fe;
-    color: #221638;
-    font-size: 40px;
-    font-weight: 900;
-    padding: 10px 40px 5px;
-    transition: 0.5s;
+
+.price-main {
+    /* display: flex; */
     text-align: center;
+   
+    display: grid;
+    justify-content: center;
 }
-.price sup{
+.price{
+    
+    
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    
+    border-radius: 100%;
+    background-color: #ed5f0d;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 12px #ed5f0d;
+   
+    
+    
+
+    
+    
+    
+}
+
+.price-sub{
+    margin-top: 5px;
+    /* background-color: black; */
+    color: #444683;
     font-size: 18px;
-    font-weight: 500;
-    margin-right: -6px;
-    top: -18px;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+    font-weight: 600;
+    /* background-color: #ff5d22;
+    align-self: baseline; */
+
+   
 }
-.price sub{
-    bottom: 2px;
-    color: #4a6f8a;
-    font-size: 14px;
-    font-weight: 500;
-    position: relative;
-    vertical-align: baseline;
-}
+
+
 .pricing-features{
     list-style-type: none;
     margin: 0;
@@ -107,21 +145,27 @@
 }
 .btn-box{
     padding: 0 30px;
-    text-align: left;
+    text-align: center;
 }
 .btn-box a{
     background-color: #ff5d22;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #fe4400;
+    border-radius: 30px;
     color: #fff;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
     overflow: hidden;
-    padding: 12px 25px 12px 50px;
+    padding: 12px 25px;
     position: relative;
     text-align: center;
     transition:.5s ;
     z-index: 1;
     text-decoration: none;
+}
+.btn-box a:hover {
+    background-color: #ffa37e;
+    border: 2px solid #ff7c58;
+    border-radius: 30px;
+    
 }

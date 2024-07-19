@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 import Header from "../components/header/header"
 import OurServices from "../components/our-services/our-services"
 import Navbar from "../components/header/navbar"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import AboutUsWrapper from "../components/about-us/about-us-wrapper"
 import Pricing from "../components/pricing/pricing"
 import Banner from "../components/banner/banner"
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
     <AboutUsWrapper data={data} />
     <Pricing data={data}/>
     <Footer data={data}/>
-    <Navbar />
+    {/* <Navbar /> */}
   </Layout>
 )
 
@@ -84,10 +84,7 @@ export const query = graphql`
                 gatsbyImageData(aspectRatio: 1.5)
               }
             }
-            modularWidget {
-              semiTitle
-              title
-            }
+            
           }
         }
       }

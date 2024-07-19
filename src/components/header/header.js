@@ -24,6 +24,7 @@ function Header({ data }) {
       <div className={styles.wrapper}>
         <div className={styles.headerleftcontent}>
           {logo.length > 0 && (
+            <Link to="/">
             <Fragment>
               {logo[0].frontmatter.logoImage != null && (
                 <GatsbyImage
@@ -36,17 +37,18 @@ function Header({ data }) {
                 <h2>{logo[0].frontmatter.logoTitle}</h2>
               )}
             </Fragment>
+            </Link>
           )}
         </div>
         <div className={styles.headermiddlecontent}>
           <nav>
             <ul>
-              <Link to="/"></Link>
+              <Link to="/">Home</Link>
             
-              <Link to="/about">About us</Link>
-              <Link to="/service">Service</Link>
+              <Link to="/about-us">About us</Link>
+              <Link to="/services">Services</Link>
               <Link to="/blog">Blog</Link>
-              <Link to="/page">Page</Link>
+              <Link to="/page-2">Page</Link>
             </ul>
           </nav>
         </div>
@@ -66,3 +68,5 @@ function Header({ data }) {
 }
 
 export default Header
+
+

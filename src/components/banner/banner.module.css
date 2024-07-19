@@ -7,9 +7,10 @@
     font-size: 16px;
     font-weight: 700;
     overflow: hidden;
-    padding: 12px 25px 12px 50px;
+    padding: 12px 25px 12px 25px;
     position: relative;
     text-align: center;
+    
     transition: .5s;
     z-index: 1;
 }
@@ -33,7 +34,9 @@
 }
 .bannerLeftcontnet{
     color: #fff;
-    width: 45%;
+    width: 100%;
+    
+    
 }
 .bannerLeftcontnet span{
     font-size: 1.5rem;
@@ -46,4 +49,9 @@
     font-weight: 800;
     margin: 1rem 0;
     line-height: 1.2;
+}
+
+.bannerRightcontnet img{
+    background-color: #65258a;
+    
 }

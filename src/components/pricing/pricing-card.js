@@ -15,11 +15,19 @@ function PricingCard({
       <div className="pricing-header">
         <h3>{pricingCardTitle}</h3>
       </div>
+      <div className="price-main">
       <div className="price">
-        <sup>{pricingCardPrefix}</sup>
-        {pricingCardPrice}
-        <sub>{pricingCardSuffix}</sub>
+        <sup>{pricingCardPrefix} {pricingCardPrice}</sup>
+        
+        
       </div>
+      
+      </div>
+      <div className="price-sub" >
+      {pricingCardSuffix}
+      </div>
+      
+      
       <ul className="pricing-features">
         {featureItems.length > 0 &&
           featureItems.map((item, index) => {

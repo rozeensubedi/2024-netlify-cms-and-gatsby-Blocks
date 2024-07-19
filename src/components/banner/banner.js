@@ -15,6 +15,8 @@ function Banner({ data }) {
     bannerContent(newInfo)
   }, [])
 
+ 
+
   return (
     <div className={styles.siteBannersection}>
       <div className={styles.wrapper}>
@@ -26,7 +28,7 @@ function Banner({ data }) {
               <p>{banner[0].frontmatter.bannerDescription}</p>
             </Fragment>
           )}
-          <button className={styles.sectionButton}>About us</button>
+          <button className={styles.sectionButton} >About us</button>
         </div>
 
         <div className={styles.bannerRightcontnet}>
