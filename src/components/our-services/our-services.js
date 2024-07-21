@@ -2,8 +2,10 @@ import React from "react"
 import "./services.css"
 import Card from "../card"
 
+
 function OurServices({ data }) {
   return (
+    
     <div className="our-service">
       {data.serviceInfo.edges.map(({ node }, index) => {
         if (

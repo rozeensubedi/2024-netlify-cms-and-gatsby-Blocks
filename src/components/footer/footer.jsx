@@ -35,6 +35,7 @@ function Footer({ data }) {
         return null; 
     }
   };
+  
   return (
     <footer>
       {footerInfo.length > 0 && (
@@ -90,7 +91,7 @@ function Footer({ data }) {
                         <li key={index}>
                           {/* <FontAwesomeIcon icon={field.fieldItemIcon} /> */}
                           <a href={field.fieldItemLink}>
-                            {field.fieldItemName}
+                            {field.fieldItemName} 
                           </a>
                         </li>
                       )

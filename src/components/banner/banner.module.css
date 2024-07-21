@@ -10,16 +10,17 @@
     padding: 12px 25px 12px 25px;
     position: relative;
     text-align: center;
-    
+    text-decoration: none;
     transition: .5s;
     z-index: 1;
 }
 .siteBannersection{
     background: linear-gradient(75deg, #65258a 10%, #e80566) !important;
     padding-bottom: 8rem;
-    padding-top: 8rem;
+    padding-top: 6rem;
     position: relative;
     z-index: 1;
+    
 }
 .wrapper{
     width: 1400px;

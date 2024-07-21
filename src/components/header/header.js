@@ -14,8 +14,8 @@ function Header({ data }) {
       }
     })
     setLogo(newInfo)
-    console.log("iNITIL STATE");
-    console.log("iNITIL STATE2");
+    // console.log("iNITIL STATE");
+    // console.log("iNITIL STATE2");
     
   }, [])
 
@@ -48,7 +48,7 @@ function Header({ data }) {
               <Link to="/about-us">About us</Link>
               <Link to="/services">Services</Link>
               <Link to="/blog">Blog</Link>
-              <Link to="/page-2">Page</Link>
+              <Link to="/page-2">Price</Link>
             </ul>
           </nav>
         </div>

@@ -4,11 +4,14 @@ import Seo from "../components/seo";
 import OurServices from "../components/our-services/our-services";
 import Header from "../components/header/header"; 
 import Footer from "../components/footer/footer"; 
+
+import OurServiceBanner from "../components/banner/our-service-banner";
 import { graphql } from "gatsby";
 
 const ServicesPage = ({ data }) => (
   <Layout>
     <Header data={data} /> 
+    <OurServiceBanner data={data} />
     <OurServices data={data} />
     <Footer data={data} /> 
   </Layout>

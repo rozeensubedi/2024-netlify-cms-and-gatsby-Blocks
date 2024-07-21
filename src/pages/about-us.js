@@ -3,12 +3,24 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Header from "../components/header/header"; 
 import Footer from "../components/footer/footer"; 
-import AboutUsWrapper from "../components/about-us/about-us-wrapper"; 
+import AboutUsWrapper from "../components/about-us/about-us-wrapper";
+
+
+
+
+
+import AboutUsBanner from "../components/banner/about-us-banner";
 import { graphql } from "gatsby";
+
+
 
 const AboutUsPage = ({ data }) => (
   <Layout>
     <Header data={data} />
+    
+    <AboutUsBanner data={data} />
+    
+    
     <AboutUsWrapper data={data} />
     <Footer data={data} />
   </Layout>
@@ -84,7 +96,36 @@ export const query = graphql`
         }
       }
     }
+    bannerInformation: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            bannerSubtitle
+            bannerTitle
+            bannerDescription
+            bannerImage {
+              childImageSharp {
+                gatsbyImageData(width: 600)
+              }
+            }
+          }
+        }
+      }
+    }
+      aboutUsBannerContent: markdownRemark(fileAbsolutePath: { regex: "/content/banner/aboutUsBanner-content.md/" }) {
+      frontmatter {
+        bannerSubtitle
+        bannerTitle
+        bannerDescription
+        bannerImage {
+          childImageSharp {
+            gatsbyImageData(width: 600)
+          }
+        }
+      }
+    }
   }
 `;
+
 
 export default AboutUsPage;

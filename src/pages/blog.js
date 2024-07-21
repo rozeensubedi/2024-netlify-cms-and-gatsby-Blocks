@@ -8,12 +8,14 @@ import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import { graphql } from 'gatsby';
 import Seo from '../components/seo';
+import BlogBanner from '../components/banner/blog-banner';
 
 const Blog = ({ data }) => {
   return (
     <Layout>
       
       <Header data={data} />
+      <BlogBanner data={data} />
       <div className="page-content-wrapper blog-details-page-content sp-y">
         <div className="container">
           <article className="blog-post-details">

@@ -6,10 +6,13 @@ import Seo from "../components/seo"
 import Header from "../components/header/header"
 
 import Footer from "../components/footer/footer"
+import PriceBanner from "../components/banner/price-banner"
 
 const SecondPage = ({ data }) => (
   <Layout>
     <Header data={data} />
+    <PriceBanner data={data} />
+
     
 
     <h1>Hi from the second page</h1>

@@ -44,28 +44,29 @@
 .about-us-card .about-us-card-content{
     padding-right: 30px;
     text-align: left;
+    
 }
 .about-us-card-image > img{
     height: auto;
     max-width: 100%;
 }
 .about-us-card-content .sub-title{
-    color: #ff2222;
+   
     display: block;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: uppercase;
-    /* background-color: red; */
-    left: 110px;
+    
+    left: 10px;
 }
 .about-us-card-content h2{
     font-size: 35px;
     margin-bottom: 12px;
     font-weight: 800;
     line-height: 1.2;
-    /* background-color: aqua; */
-    margin-left: 110px;
+    
+    margin-left: 10px;
     text-align: start;
 }
 .about-us-card-content p{
@@ -79,4 +80,5 @@
 .about-us-card-reverse{
     flex-direction: row-reverse;
 }
+
 
