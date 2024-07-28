@@ -1,28 +1,31 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import Header from "../components/header/header"
-import OurServices from "../components/our-services/our-services"
-import Navbar from "../components/header/navbar"
-import { graphql, Link } from "gatsby"
-import AboutUsWrapper from "../components/about-us/about-us-wrapper"
-import Pricing from "../components/pricing/pricing"
-import Banner from "../components/banner/banner"
-import Footer from "../components/footer/footer"
 import "../css/index.css"
+const Header = React.lazy(() => import("../components/header/header"))
+const OurServices = React.lazy(() => import("../components/our-services/our-services"))
+const AboutUsWrapper = React.lazy(() => import("../components/about-us/about-us-wrapper"))
+const Pricing = React.lazy(() => import("../components/pricing/pricing"))
+const Banner = React.lazy(() => import("../components/banner/banner"))
+const Footer = React.lazy(() => import("../components/footer/footer"))
+const BlogBanner = React.lazy(() => import("../components/banner/blog-banner"))
+
+
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <Header data={data} />
-    <Banner data={data}/>
-    <OurServices data={data} />
-    <AboutUsWrapper data={data} />
-    <Pricing data={data}/>
-    <Footer data={data}/>
-    {/* <Navbar /> */}
+  // <Layout banner={data.bannerInformation.edges[0].node.frontmatter}>
+  <Layout bannerData={[data.bannerInformation.edges[0]?.node.frontmatter,data.blogBannerContent.frontmatter]} data={data}>
+    
+   <React.Suspense fallback={<div>Loading...</div>}>
+      <Seo title="Home" />     
+      <AboutUsWrapper data={data} />
+      <OurServices data={data} />
+      <BlogBanner data={data.blogBannerContent.frontmatter} />
+      <Pricing data={data} />
+      
+    </React.Suspense>
   </Layout>
 )
 
@@ -152,7 +155,19 @@ export const query = graphql`
         }
       }
     }
-    bannerInformation: allMarkdownRemark {
+    blogBannerContent: markdownRemark(fileAbsolutePath: { regex: "/content/banner/blogBanner-content.md/" }) {
+      frontmatter {
+        bannerSubtitle
+        bannerTitle
+        bannerDescription
+        bannerImage {
+          childImageSharp {
+          gatsbyImageData(width: 600)
+      }
+    }
+  }
+ }
+  bannerInformation: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/banner/banner-content.md/" } }) {
       edges {
         node {
           frontmatter {
@@ -168,5 +183,16 @@ export const query = graphql`
         }
       }
     }
-  }
+    
+}
 `
+
+
+
+
+
+
+
+
+
+

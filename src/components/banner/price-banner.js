@@ -27,6 +27,7 @@ const PriceBanner = () => {
 
   return (
     <div className={styles.siteBannersection}>
+      <div className={styles.bannerContainer}>
       <div className={styles.wrapper}>
         <div className={styles.bannerLeftcontnet}>
           <span>{bannerSubtitle}</span>
@@ -36,8 +37,10 @@ const PriceBanner = () => {
         </div>
 
         <div className={styles.bannerRightcontnet}>
-          <GatsbyImage alt={bannerTitle} image={image} />
+        <GatsbyImage alt={bannerTitle} image={image}/>
+          {/* <GatsbyImage alt={bannerTitle} image={image} loading="eager"/> */}
         </div>
+      </div>
       </div>
     </div>
   );

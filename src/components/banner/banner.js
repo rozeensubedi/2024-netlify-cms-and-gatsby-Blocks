@@ -1,49 +1,118 @@
-
-import React, { useEffect, useState, Fragment } from "react";
-import * as styles from "./banner.module.css";
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import * as styles from "./banner.module.css";
 
-function Banner({ data }) {
-  const [banner, bannerContent] = useState([])
-
-  useEffect(() => {
-    let newInfo = []
-    data.bannerInformation.edges.forEach(({ node }) => {
-      if (node.frontmatter.bannerTitle != null) {
-        newInfo.push(node)
+const Banner = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      bannerInformation: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/banner/banner-content.md/" } }) {
+        edges {
+          node {
+            frontmatter {
+              bannerSubtitle
+              bannerTitle
+              bannerDescription
+              bannerImage {
+                childImageSharp {
+                  gatsbyImageData(width: 600)
+                }
+              }
+            }
+          }
+        }
       }
-    })
-    bannerContent(newInfo)
-  }, [])
+    }
+  `);
 
  
+  const bannerData = data.bannerInformation.edges[0]?.node.frontmatter;
+  const image = bannerData ? getImage(bannerData.bannerImage) : null;
 
   return (
     <div className={styles.siteBannersection}>
-      <div className={styles.wrapper}>
+       <div className={styles.bannerContainer}>
+       <div className={styles.wrapper}>
         <div className={styles.bannerLeftcontnet}>
-          {banner.length > 0 && (
-            <Fragment>
-              <span>{banner[0].frontmatter.bannerSubtitle}</span>
-              <h2>{banner[0].frontmatter.bannerTitle}</h2>
-              <p>{banner[0].frontmatter.bannerDescription}</p>
-            </Fragment>
+          {bannerData && (
+            <>
+              <span>{bannerData.bannerSubtitle}</span>
+              <h2>{bannerData.bannerTitle}</h2>
+              <p>{bannerData.bannerDescription}</p>
+              <Link to="/about-us" className={styles.sectionButton}>About us</Link>
+            </>
           )}
-          <Link to="/about-us" className={styles.sectionButton}> About us</Link>
         </div>
 
         <div className={styles.bannerRightcontnet}>
-          {banner.length > 0 && (
-            <GatsbyImage
-              alt="hello"
-              image={getImage(banner[0].frontmatter.bannerImage)}
-            />
+          {image && (
+            <GatsbyImage alt={bannerData.bannerTitle} image={image} loading="eager" />
           )}
         </div>
       </div>
+       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,25 +4,23 @@ import Seo from "../components/seo";
 import Header from "../components/header/header"; 
 import Footer from "../components/footer/footer"; 
 import AboutUsWrapper from "../components/about-us/about-us-wrapper";
-
-
-
-
-
 import AboutUsBanner from "../components/banner/about-us-banner";
 import { graphql } from "gatsby";
 
 
 
 const AboutUsPage = ({ data }) => (
-  <Layout>
-    <Header data={data} />
+  <Layout data={data}>
+    <Seo title="About Us" />
     
-    <AboutUsBanner data={data} />
+    
+
+    
+    <AboutUsBanner data={data.aboutUsBannerContent.frontmatter} />
     
     
     <AboutUsWrapper data={data} />
-    <Footer data={data} />
+    
   </Layout>
 );
 
@@ -90,22 +88,6 @@ export const query = graphql`
               footerField {
                 fieldItemName
                 fieldItemLink
-              }
-            }
-          }
-        }
-      }
-    }
-    bannerInformation: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            bannerSubtitle
-            bannerTitle
-            bannerDescription
-            bannerImage {
-              childImageSharp {
-                gatsbyImageData(width: 600)
               }
             }
           }

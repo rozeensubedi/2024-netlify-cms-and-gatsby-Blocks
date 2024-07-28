@@ -1,7 +1,7 @@
 ---
-bannerSubtitle: "DIGITAL"
-bannerTitle: "Streamline Your Decision-Making Process with Ease"
-bannerDescription: "Discover how our newly developed cloud-based tool is transforming the way businesses approach data analysis and decision-making. From automating mundane tasks to delivering actionable insights, our innovative solution empowers organizations to harness the full potential of their data effortlessly. Learn how you can enhance efficiency, drive strategic initiatives, and achieve business success in the digital age."
+bannerSubtitle: "blog"
+bannerTitle: "Transforming Challenges into Opportunities"
+bannerDescription: "Blog is dedicated to exploring innovative solutions and strategic insights that empower businesses to navigate obstacles and thrive in competitive landscapes. Through expert perspectives and real-world case studies, we uncover actionable strategies that transform adversity into avenues for growth, ensuring every challenge becomes a stepping stone towards success. Join us as we redefine consultancy with practical wisdom and visionary guidance. Your go-to resource for unlocking the potential within every business hurdle."
 bannerImage: ../../static/images/banner-image.png
 
 ---

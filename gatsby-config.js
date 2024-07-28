@@ -124,6 +124,8 @@ module.exports = {
         fonts: [
           `Nunito\:400,400i,700,700i`, // Specify font family and variants
           `Open Sans\:400,400i,700,700i`,
+          `Inter\:400,400i,700,700i`,
+          
         ],
         display: "swap", // Optional: swap, block, fallback, optional
       },

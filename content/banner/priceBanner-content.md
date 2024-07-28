@@ -1,7 +1,7 @@
 ---
-bannerSubtitle: "DIGITAL"
-bannerTitle: "Empowering Businesses with Affordable Excellence"
-bannerDescription: "Our pricing philosophy is rooted in transparency and value. We offer competitive rates that align with the quality and depth of service you deserve. Whether you're a startup or an established enterprise, our flexible pricing options ensure you receive the tailored support you need without compromising on excellence. Explore our pricing plans designed to fit your budget and scale with your business growth, empowering you to achieve optimal results without financial uncertainty."
+bannerSubtitle: "Price"
+bannerTitle: "Price IQ The Science Behind Pricing Success"
+bannerDescription: "Our pricing philosophy delves into the intricate world of strategic pricing with a focus on empirical analysis and data-driven insights. This blog explores how businesses can leverage market research, consumer behavior studies, and pricing psychology to set optimal price points. From competitive analysis to demand forecasting, we uncover the methodologies and strategies that drive profitability and market leadership. Join us as we decode the complexities of pricing strategy, equipping you with the knowledge and tools to make informed decisions that maximize revenue ."
 bannerImage: ../../static/images/banner-image.png
 
 ---

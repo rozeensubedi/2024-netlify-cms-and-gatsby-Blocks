@@ -7,13 +7,23 @@
 import React, {Fragment} from "react"
 // import {  graphql } from "gatsby"
 import GlobalStyles from '../styles/GlobalStyles'
+import Banner from "./banner/banner";
+import Header from "./header/header";
+import Footer from "./footer/footer";
 
 
-const Layout = ({ children }) => {
+
+const Layout = ({ children, bannerData, data }) => {
+    
  return(
 <Fragment>
     <GlobalStyles/>
-{children}
+    <Header data={data} />
+    {bannerData &&(
+        < Banner bannerData={bannerData} />
+    )}
+    {children}
+    <Footer data={data} />
 </Fragment>
  );
 }

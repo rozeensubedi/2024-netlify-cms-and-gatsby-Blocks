@@ -14,7 +14,7 @@ const AboutUsBanner = () => {
           bannerDescription
           bannerImage {
             childImageSharp {
-              gatsbyImageData(width: 600)
+              gatsbyImageData(width: 600, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
         }
@@ -27,7 +27,8 @@ const AboutUsBanner = () => {
 
   return (
     <div className={styles.siteBannersection}>
-      <div className={styles.wrapper}>
+       <div className={styles.bannerContainer}>
+       <div className={styles.wrapper}>
         <div className={styles.bannerLeftcontnet}>
           <span>{bannerSubtitle}</span>
           <h2>{bannerTitle}</h2>
@@ -36,12 +37,38 @@ const AboutUsBanner = () => {
         </div>
 
         <div className={styles.bannerRightcontnet}>
-          <GatsbyImage alt={bannerTitle} image={image} />
+          <GatsbyImage alt={bannerTitle} image={image} loading="eager"/>
         </div>
       </div>
+       </div>
     </div>
   );
 };
 
 export default AboutUsBanner;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

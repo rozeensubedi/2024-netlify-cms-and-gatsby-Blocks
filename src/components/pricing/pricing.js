@@ -25,7 +25,8 @@ function Pricing({ data }) {
   }, [])
 
   return (
-    <div id="pricing-area">
+     <div id="pricing-area">
+       <div className="pricing-main-container">
       <div className="pricing-area-title">
         {info[0] != undefined && (
           <Fragment>
@@ -50,7 +51,9 @@ function Pricing({ data }) {
             )
           })}
       </div>
+      
     </div>
+   </div>
   )
 }
 

@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react"
 import "./about-us.css"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { IoMdCheckmark } from "react-icons/io"
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 function AboutUsCard({ data }) {
   const [info, setInfo] = useState([])
@@ -49,8 +49,9 @@ function AboutUsCard({ data }) {
               </div>
               <div className="about-us-card-image">
                 <GatsbyImage
-                  image={getImage(element.frontmatter.aboutUsCardFeaturedImage)}
+                  image={getImage(element.frontmatter.aboutUsCardFeaturedImage)} loading="eager"
                   alt={element.frontmatter.aboutUsCardTitle}
+                  // loading="eager"
                 />
               </div>
             </div>

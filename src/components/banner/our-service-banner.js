@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import * as styles from "./banner.module.css"; 
 
 const OurServiceBanner = () => {
+  
   const data = useStaticQuery(graphql`
     query {
       ourServiceBannerContent: markdownRemark(fileAbsolutePath: { regex: "/content/banner/ourServiceBanner-content.md/" }) {
@@ -27,6 +28,7 @@ const OurServiceBanner = () => {
 
   return (
     <div className={styles.siteBannersection}>
+      <div className={styles.bannerContainer}>
       <div className={styles.wrapper}>
         <div className={styles.bannerLeftcontnet}>
           <span>{bannerSubtitle}</span>
@@ -36,9 +38,13 @@ const OurServiceBanner = () => {
         </div>
 
         <div className={styles.bannerRightcontnet}>
-          <GatsbyImage alt={bannerTitle} image={image} />
+        <GatsbyImage alt={bannerTitle} image={image} loading="eager"/>
+          {/* <GatsbyImage alt={bannerTitle} image={image} loading="eager"/> */}
         </div>
       </div>
+
+      </div>
+      
     </div>
   );
 };
