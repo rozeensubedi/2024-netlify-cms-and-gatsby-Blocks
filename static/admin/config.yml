@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
 media_folder: static/images
-public_folder: ../../static/images/
+public_folder: /images
 
 collections:
   - name: "our-services-card"
@@ -43,7 +43,7 @@ collections:
     label: "Pricing Content"
     folder: "content/pricing-content"
     create: false
-    slug: "{{pricingTitle}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "pricingTitle", widget: "string" }
       - { label: "Description", name: "pricingDescription", widget: "markdown" }
@@ -53,7 +53,7 @@ collections:
     label: "Pricing Card"
     folder: "content/pricing-card"
     create: true
-    slug: "{{pricingCardTitle}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "pricingCardTitle", widget: "string" }
       - { label: "Price", name: "pricingCardPrice", widget: "string" }
@@ -77,7 +77,7 @@ collections:
     label: "About Us Card"
     folder: "content/about-us-cards"
     create: true
-    slug: "{{aboutUsCardTitle}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "aboutUsCardTitle", widget: "string" }
       - { label: "Semi Title", name: "aboutUsCardSemiTitle", widget: "string" }
@@ -95,47 +95,235 @@ collections:
     label: "Logo"
     folder: "content/logo"
     create: false
-    slug: "{{logoTitle}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "logoTitle", widget: "string" }
       - { label: "Featured Image", name: "logoImage", widget: "image" }
 
-  - name: 'footer'
+  - name: "footer"
     preview: false
-    label: 'Footer'
-    folder: 'content/footer'
+    label: "Footer"
+    folder: "content/footer"
     create: false
-    slug: "Footer"
+    slug: "{{slug}}"
     fields:
-      - { label: 'Title', name: 'footerTitle', widget: 'string' }
-      - { label: 'Content', name: 'footerContent', widget: 'string' }
+      - { label: "Title", name: "footerTitle", widget: "string" }
+      - { label: "Content", name: "footerContent", widget: "string" }
       - label: "Social Widgets"
         name: "socialIcons"
         widget: "list"
         fields:
-          - { label: 'Link', name: 'socialLink', widget: 'string' }
-          - { label: 'Icon ClassName', name: 'socialIconClass', widget: 'string' }
+          - { label: "Link", name: "socialLink", widget: "string" }
+          - { label: "Icon ClassName", name: "socialIconClass", widget: "string" }
       - label: "Footer Field"
         name: "footerField"
         widget: "list"
         fields:
-          - { label: 'Title', name: 'fieldTitle', widget: 'string' }
+          - { label: "Title", name: "fieldTitle", widget: "string" }
           - label: "Footer Field"
             name: "footerField"
             widget: "list"
             fields:
-              - { label: 'Field Item Link', name: 'fieldItemLink', widget: 'string' }
-              - { label: 'Field Item Name', name: 'fieldItemName', widget: 'string' }
-              - { label: 'Field Item Icon', name: 'fieldItemIcon', widget: 'string' }
+              - { label: "Field Item Link", name: "fieldItemLink", widget: "string" }
+              - { label: "Field Item Name", name: "fieldItemName", widget: "string" }
+              - { label: "Field Item Icon", name: "fieldItemIcon", widget: "string" }
 
   - name: "banner"
     preview: false
     label: "Banner"
     folder: "content/banner"
     create: false
-    slug: "{{bannerTitle}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Sub Title", name: "bannerSubtitle", widget: "string" }
       - { label: "Title", name: "bannerTitle", widget: "string" }
       - { label: "Description", name: "bannerDescription", widget: "string" }
       - { label: "Featured Image", name: "bannerImage", widget: "image" }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# backend:
+#   name: git-gateway
+#   branch: main
+
+# media_folder: static/images
+# public_folder: ../../static/images/
+
+# collections:
+#   - name: "our-services-card"
+#     preview: false
+#     label: "Our Service"
+#     folder: "content/service-card"
+#     create: true
+#     slug: "{{slug}}"
+#     fields:
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Content", name: "content", widget: "markdown" }
+#       - { label: "Link", name: "link", widget: "string" }
+
+#   - name: "services"
+#     preview: false
+#     label: "Service"
+#     folder: "content/service-page"
+#     create: false
+#     slug: "{{slug}}"
+#     fields:
+#       - { label: "Title", name: "serviceTitle", widget: "string" }
+#       - { label: "Description", name: "serviceDescription", widget: "markdown" }
+
+#   - name: "about-us"
+#     preview: false
+#     label: "About Us"
+#     folder: "content/about-us"
+#     create: false
+#     slug: "{{slug}}"
+#     fields:
+#       - { label: "Title", name: "aboutUsTitle", widget: "string" }
+#       - { label: "Semi Title", name: "aboutUsSemiTitle", widget: "string" }
+#       - { label: "Description", name: "aboutUsDescription", widget: "markdown" }
+
+#   - name: "pricing-content"
+#     preview: false
+#     label: "Pricing Content"
+#     folder: "content/pricing-content"
+#     create: false
+#     slug: "{{pricingTitle}}"
+#     fields:
+#       - { label: "Title", name: "pricingTitle", widget: "string" }
+#       - { label: "Description", name: "pricingDescription", widget: "markdown" }
+
+#   - name: "pricing-card"
+#     preview: false
+#     label: "Pricing Card"
+#     folder: "content/pricing-card"
+#     create: true
+#     slug: "{{pricingCardTitle}}"
+#     fields:
+#       - { label: "Title", name: "pricingCardTitle", widget: "string" }
+#       - { label: "Price", name: "pricingCardPrice", widget: "string" }
+#       - { label: "Suffix", name: "pricingCardSuffix", widget: "string" }
+#       - { label: "Prefix", name: "pricingCardPrefix", widget: "string" }
+#       - { label: "Button Text", name: "buttonText", widget: "string" }
+#       - label: "Feature Items"
+#         name: "featureItems"
+#         widget: "list"
+#         fields:
+#           - { label: "Pricing Feature Content", name: "pricingFeatureContent", widget: "string" }
+#           - label: "Feature Type"
+#             name: "featureType"
+#             widget: "select"
+#             options:
+#               - { label: "Available", value: "available" }
+#               - { label: "Unavailable", value: "unavailable" }
+
+#   - name: "about-us-card"
+#     preview: false
+#     label: "About Us Card"
+#     folder: "content/about-us-cards"
+#     create: true
+#     slug: "{{aboutUsCardTitle}}"
+#     fields:
+#       - { label: "Title", name: "aboutUsCardTitle", widget: "string" }
+#       - { label: "Semi Title", name: "aboutUsCardSemiTitle", widget: "string" }
+#       - { label: "Description", name: "aboutUsCardDescription", widget: "markdown" }
+#       - { label: "Featured Image", name: "aboutUsCardFeaturedImage", widget: "image" }
+#       - label: "Info Block"
+#         name: "modularWidget"
+#         widget: "list"
+#         fields:
+#           - { label: "Title", name: "title", widget: "string" }
+#           - { label: "Semi Title", name: "semiTitle", widget: "string" }
+
+#   - name: "site-logo"
+#     preview: false
+#     label: "Logo"
+#     folder: "content/logo"
+#     create: false
+#     slug: "{{logoTitle}}"
+#     fields:
+#       - { label: "Title", name: "logoTitle", widget: "string" }
+#       - { label: "Featured Image", name: "logoImage", widget: "image" }
+
+#   - name: 'footer'
+#     preview: false
+#     label: 'Footer'
+#     folder: 'content/footer'
+#     create: false
+#     slug: "Footer"
+#     fields:
+#       - { label: 'Title', name: 'footerTitle', widget: 'string' }
+#       - { label: 'Content', name: 'footerContent', widget: 'string' }
+#       - label: "Social Widgets"
+#         name: "socialIcons"
+#         widget: "list"
+#         fields:
+#           - { label: 'Link', name: 'socialLink', widget: 'string' }
+#           - { label: 'Icon ClassName', name: 'socialIconClass', widget: 'string' }
+#       - label: "Footer Field"
+#         name: "footerField"
+#         widget: "list"
+#         fields:
+#           - { label: 'Title', name: 'fieldTitle', widget: 'string' }
+#           - label: "Footer Field"
+#             name: "footerField"
+#             widget: "list"
+#             fields:
+#               - { label: 'Field Item Link', name: 'fieldItemLink', widget: 'string' }
+#               - { label: 'Field Item Name', name: 'fieldItemName', widget: 'string' }
+#               - { label: 'Field Item Icon', name: 'fieldItemIcon', widget: 'string' }
+
+#   - name: "banner"
+#     preview: false
+#     label: "Banner"
+#     folder: "content/banner"
+#     create: false
+#     slug: "{{bannerTitle}}"
+#     fields:
+#       - { label: "Sub Title", name: "bannerSubtitle", widget: "string" }
+#       - { label: "Title", name: "bannerTitle", widget: "string" }
+#       - { label: "Description", name: "bannerDescription", widget: "string" }
+#       - { label: "Featured Image", name: "bannerImage", widget: "image" }
