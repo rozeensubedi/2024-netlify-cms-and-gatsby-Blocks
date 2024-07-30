@@ -9,5 +9,5 @@ bannerDescription: It begin with a vision to redefine industry standards and
   pushed boundaries to exceed expectations. Join us on our journey as we
   continue to pioneer new possibilities, uphold our legacy of integrity, and
   empower success for our clients and communities alike.
-bannerImage: ../../static/images/banner-image.png
+bannerImage: /images/image.png
 ---
