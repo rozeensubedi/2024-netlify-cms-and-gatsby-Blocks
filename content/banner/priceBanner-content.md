@@ -9,5 +9,5 @@ bannerDescription: Our pricing philosophy delves into the intricate world of
   strategies that drive profitability and market leadership. Join us as we
   decode the complexities of pricing strategy, equipping you with the knowledge
   and tools to make informed decisions that maximize revenue .
-bannerImage: /images/image4.png
+bannerImage: ../../static/images/image4.png
 ---

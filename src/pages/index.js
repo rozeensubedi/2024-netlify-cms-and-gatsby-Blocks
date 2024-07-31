@@ -12,8 +12,6 @@ const Banner = React.lazy(() => import("../components/banner/banner"))
 const Footer = React.lazy(() => import("../components/footer/footer"))
 const BlogBanner = React.lazy(() => import("../components/banner/blog-banner"))
 
-
-
 const IndexPage = ({ data }) => (
   // <Layout banner={data.bannerInformation.edges[0].node.frontmatter}>
   <Layout bannerData={[data.bannerInformation.edges[0]?.node.frontmatter,data.blogBannerContent.frontmatter]} data={data}>
@@ -162,12 +160,12 @@ export const query = graphql`
         bannerDescription
         bannerImage {
           childImageSharp {
-          gatsbyImageData(width: 600)
+            gatsbyImageData(width: 600)
+          }
+        }
       }
     }
-  }
- }
-  bannerInformation: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/banner/banner-content.md/" } }) {
+    bannerInformation: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/banner/banner-content.md/" } }) {
       edges {
         node {
           frontmatter {
@@ -183,15 +181,8 @@ export const query = graphql`
         }
       }
     }
-    
-}
+  }
 `
-
-
-
-
-
-
 
 
 

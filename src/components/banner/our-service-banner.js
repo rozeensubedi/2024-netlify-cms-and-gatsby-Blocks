@@ -22,7 +22,7 @@ const OurServiceBanner = () => {
       }
     }
   `);
-
+  
   const { bannerSubtitle, bannerTitle, bannerDescription, bannerImage } = data.ourServiceBannerContent.frontmatter;
   const image = getImage(bannerImage);
 

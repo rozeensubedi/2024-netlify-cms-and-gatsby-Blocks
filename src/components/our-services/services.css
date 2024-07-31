@@ -134,7 +134,8 @@
 }
 
 .read-more-btn:hover {
-    background-color: #f86c39;
+    background-color: #ffa37e;
+    transform: scale(1.1);
     
 }
 

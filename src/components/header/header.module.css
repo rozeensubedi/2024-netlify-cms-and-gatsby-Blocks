@@ -2,6 +2,7 @@
     
   background: #fff;
   box-shadow: 0 2px 20px #0000000d;
+  padding: 10px 0 10px 0;
   
 }
 
@@ -59,6 +60,7 @@
   
   .hamburgerMenu {
     cursor: pointer;
+    display: none;
   }
 
 .headerMiddleContent ul{
@@ -76,6 +78,8 @@
 
 .sectionButton{
     background-color: #ff5d22;
+    /* background: linear-gradient(75deg, #65258a 10%, #e80566) !important; */
+    /* border: 2px solid black; */
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -92,7 +96,9 @@
 }
 
 .sectionButton:hover {
-  background: linear-gradient(75deg, #65258a 10%, #e80566) !important;
+  /* background: linear-gradient(75deg, #8b4d9c 10%, #f85b8a) !important; */
+  background-color: #ffa37e;
+  transform: scale(1.1);
 }
 .headerRightContent{
     display: flex;
@@ -125,6 +131,7 @@
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1000;
+    
   }
   
   .slideInNavActive {

@@ -12,15 +12,16 @@ const AboutUsBanner = () => {
           bannerSubtitle
           bannerTitle
           bannerDescription
-          bannerImage {
+          bannerImage   {
             childImageSharp {
               gatsbyImageData(width: 600, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
-          }
+          } 
         }
       }
     }
   `);
+
 
   const { bannerSubtitle, bannerTitle, bannerDescription, bannerImage } = data.aboutUsBannerContent.frontmatter;
   const image = getImage(bannerImage);
@@ -46,29 +47,3 @@ const AboutUsBanner = () => {
 };
 
 export default AboutUsBanner;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

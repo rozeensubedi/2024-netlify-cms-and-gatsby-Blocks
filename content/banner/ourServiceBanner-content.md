@@ -9,5 +9,5 @@ bannerDescription: Explore the art and science of delivering exceptional service
   Join us as we dissect successful case studies, share practical tips, and
   inspire service excellence that not only delights customers but also drives
   loyalty and advocacy.
-bannerImage: /images/image3.png
+bannerImage: ../../static/images/image3.png
 ---

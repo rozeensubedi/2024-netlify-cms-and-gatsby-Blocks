@@ -25,7 +25,6 @@ const Banner = () => {
     }
   `);
 
- 
   const bannerData = data.bannerInformation.edges[0]?.node.frontmatter;
   const image = bannerData ? getImage(bannerData.bannerImage) : null;
 
@@ -56,63 +55,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

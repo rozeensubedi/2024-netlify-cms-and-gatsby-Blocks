@@ -9,5 +9,5 @@ bannerDescription: Blog is dedicated to exploring innovative solutions and
   success. Join us as we redefine consultancy with practical wisdom and
   visionary guidance. Your go-to resource for unlocking the potential within
   every business hurdle.
-bannerImage: /images/image2.png
+bannerImage: ../../static/images/image2.png
 ---

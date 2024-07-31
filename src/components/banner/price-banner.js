@@ -13,14 +13,16 @@ const PriceBanner = () => {
           bannerTitle
           bannerDescription
           bannerImage {
-            childImageSharp {
-              gatsbyImageData(width: 600)
-            }
+          childImageSharp {
+            gatsbyImageData(width: 600)
           }
+        }
         }
       }
     }
   `);
+
+  
 
   const { bannerSubtitle, bannerTitle, bannerDescription, bannerImage } = data.priceBannerContent.frontmatter;
   const image = getImage(bannerImage);
