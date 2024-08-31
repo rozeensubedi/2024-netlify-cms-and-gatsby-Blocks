@@ -9,5 +9,5 @@ serviceDescription: >-
   team is here to support you every step of the way. 
 
 
-  Explore our key services:
+  Explore our key services;
 ---
