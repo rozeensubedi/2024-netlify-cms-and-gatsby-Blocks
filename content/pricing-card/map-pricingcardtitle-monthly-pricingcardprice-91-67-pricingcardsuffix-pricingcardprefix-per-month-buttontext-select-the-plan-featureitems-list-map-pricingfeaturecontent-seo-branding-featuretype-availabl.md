@@ -1,8 +1,8 @@
 ---
 pricingCardTitle: Monthly
 pricingCardPrice: "91.67"
-pricingCardSuffix: $
-pricingCardPrefix: Per Month
+pricingCardSuffix: Per Month
+pricingCardPrefix: $
 buttonText: Select the Plan
 featureItems:
   - pricingFeatureContent: SEO & Branding
